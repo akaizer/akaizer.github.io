@@ -153,7 +153,7 @@ function isValidAidDate(data) {
 function createLinkTag(data, id) {
   let td = document.createElement("td");
   td.innerHTML = "<a href='https://www.cybernations.net/nation_drill_display.asp?Nation_ID=" + id
-      + "' target='_blank'>" + data + "</a> + (" + id + ")";
+      + "' target='_blank'>" + data + "</a> (" + id + ")";
   return td;
 }
 
