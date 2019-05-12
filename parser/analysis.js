@@ -2,7 +2,6 @@
 function analysis() {
   $("#dataBody").empty();
   Object.keys(nations).forEach(nationId => {
-    console.log(nationId);
     let nation = nations[nationId];
     let tr = document.createElement("tr");
 
@@ -49,7 +48,6 @@ function analysis() {
 
 // mildly complicated calculations to determine who needs aid and who can send aid
 function aidSlotCalculations(tr, nation, nationId, totalAid) {
-  console.log(NOAID.indexOf(parseInt(nationId)));
   let strength = document.getElementById("strength").value;
   if (NOAID.indexOf(parseInt(nationId)) === -1) {
     if (parseFloat(nation[[STRENGTH]].replace(",", "")) > parseFloat(strength)) {
@@ -96,12 +94,10 @@ function aidCalculation() {
           war => war[[W_STATUS]] === ACTIVE_WAR).length;
 
       if (WARAID.indexOf(parseInt(nationId)) !== -1) {
-        if (offWarCount + defWarCount > 0) {
-          document.getElementById("warAid").innerHTML +=
-              "<a href='https://www.cybernations.net/nation_drill_display.asp?Nation_ID=" + nationId
-              + "' target='_blank'>https://www.cybernations.net/nation_drill_display.asp?Nation_ID="
-              + nationId + "</a><br />";
-        }
+        document.getElementById("warAid").innerHTML +=
+            "<a href='https://www.cybernations.net/nation_drill_display.asp?Nation_ID=" + nationId
+            + "' target='_blank'>https://www.cybernations.net/nation_drill_display.asp?Nation_ID="
+            + nationId + "</a><br />";
       } else {
         if (offWarCount + defWarCount > 0) {
           document.getElementById("genericWarAid").innerHTML +=
