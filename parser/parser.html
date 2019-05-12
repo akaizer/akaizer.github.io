@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <link rel="stylesheet" href="bootstrap.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+  <style>
+    .note {
+      display: inline-block;
+      min-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <a name="top"></a>
+  <div class="col-md-12" style="text-align: center;">
+    <a href="howto.html">Instructions on Use</a>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="allianceOfInterest">Alliance of interest:</label>
+      <input type="text" id="allianceOfInterest" name="allianceOfInterest"
+             value="Freehold of The Wolves" class="form-control"/>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="strength">Aid Strength Threshold:</label>
+      <input type="number" id="strength" name="strength"
+             value="80000" class="form-control"/>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="files">Choose files to load:</label>
+      <input type="file" id="files" name="files" accept=".txt" multiple="multiple"
+             class="form-control"/>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="reload">Refresh Data:</label>
+      <input type="button" id="reload" value="Refresh" class="form-control"/>
+    </div>
+
+    <div class="form-group col-md-6 border">
+      <span class="note">Non-Pending, Active Nations in Alliance:</span> <span
+        id="nationCount"></span> <br/>
+      <span class="note">Send Aid (strength > X and >1 open slots):</span> <span
+        id="sendAid"></span> <br/>
+      <span class="note">Need Aid (strength < X and open slots):</span> <span
+        id="needAid"></span><br/>
+      <a href="#targets">Jump to Aid Targets</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table tablesorter" id="dataTable">
+    <thead>
+    <tr>
+      <th>Nation</th>
+      <th>Ruler</th>
+      <th>Strength</th>
+      <th>Wars (off, def)</th>
+      <th>Aid (sent, recv)</th>
+      <th>Aid Open</th>
+    </tr>
+    </thead>
+    <tbody id="dataBody">
+
+    </tbody>
+  </table>
+
+</div>
+
+<hr/>
+<a name="targets"></a>
+<div class="container">
+  <a href="#top">Jump back to top</a>
+  <div class="row">
+    <div class="col-md-6 border">
+      <h4>Supplied Non-War Aid Targets
+        <small>(non-war-aid.txt)</small>
+      </h4>
+      <span id="nonWarAid"></span>
+    </div>
+    <div class="col-md-6 border">
+      <h4>Supplied War Aid Targets
+        <small>(war-aid.txt)</small>
+      </h4>
+      <span id="warAid"></span>
+    </div>
+    <div class="col-md-6 border">
+      <h4>Generic War Aid Targets
+        <small>
+          <small>(Nations at war...)</small>
+        </small>
+      </h4>
+      <span id="genericWarAid"></span>
+    </div>
+
+    <div class="col-md-6 border">
+      <h4>Rulers who can send aid
+        <small>(split into groups of 25; click group to copy to clipboard)</small>
+      </h4>
+      <div id="availableAid" class="row">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="reference.js"></script>
+<script src="analysis.js"></script>
+<script src="parser.js"></script>
+
+</body>
+</html>
