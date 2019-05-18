@@ -83,7 +83,7 @@ function aidCalculation() {
 
   needAid.forEach(nationId => {
     if (NONWARAID.indexOf(parseInt(nationId)) !== -1) {
-      document.getElementById("nonWarAid").innerHTML +=
+      document.getElementById("nonWarAid").innerHTML += nations[nationId][[RULER]] + " - " +
           "<a href='https://www.cybernations.net/nation_drill_display.asp?Nation_ID=" + nationId
           + "' target='_blank'>https://www.cybernations.net/nation_drill_display.asp?Nation_ID="
           + nationId + "</a><br />";
@@ -94,13 +94,13 @@ function aidCalculation() {
           war => war[[W_STATUS]] === ACTIVE_WAR).length;
 
       if (WARAID.indexOf(parseInt(nationId)) !== -1) {
-        document.getElementById("warAid").innerHTML +=
+        document.getElementById("warAid").innerHTML += nations[nationId][[RULER]] + " - " +
             "<a href='https://www.cybernations.net/nation_drill_display.asp?Nation_ID=" + nationId
             + "' target='_blank'>https://www.cybernations.net/nation_drill_display.asp?Nation_ID="
             + nationId + "</a><br />";
       } else {
         if (offWarCount + defWarCount > 0) {
-          document.getElementById("genericWarAid").innerHTML +=
+          document.getElementById("genericWarAid").innerHTML += nations[nationId][[RULER]] + " - " +
               "<a href='https://www.cybernations.net/nation_drill_display.asp?Nation_ID=" + nationId
               + "' target='_blank'>https://www.cybernations.net/nation_drill_display.asp?Nation_ID="
               + nationId + "</a><br />";
