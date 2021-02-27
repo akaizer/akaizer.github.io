@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <style>
+        section {
+            border-bottom: 1px solid grey;
+            margin-bottom: 0.5em;
+        }
+
+        .card-body {
+            padding: .5rem 0 0 0 !important;
+        }
+
+        .card {
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-bottom: 5px;
+        }
+
+        .unknown {
+            color: grey;
+            font-style: italic;
+        }
+    </style>
+
+    <title>Raw BeerClub Analysis</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-block d-sm-none">
+            <div class="text-center" style="margin-top: 20vh;">
+                Sorry, this content is only available on larger screens at this time. Either change your screen
+                orientation or switch to a larger device.
+            </div>
+        </div>
+        <div class="col-12 d-none d-sm-block">
+            <section>
+                <div class="col-12 border mb-2 mt-2">
+                    <form class="form">
+                        <div class="form-row mb-2">
+                            <div class="col-4 offset-xl-1">
+                                <label for="clubs">Select Club</label>
+                                <select name="clubs" id="clubs" class="form-control" onchange="club()">
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <label for="years">Year</label>
+                                <select name="years" id="years" class="form-control" onchange="club()">
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <label for="months">Month</label>
+                                <select name="months" id="months" class="form-control" onchange="club()">
+                                </select>
+                            </div>
+                            <div class="col-4 col-xl-3">
+                                <div style="position: absolute; bottom: 0">
+                                    <button type="button" class="btn btn-primary" onclick="changeDate(-1)">
+                                        -1 Month
+                                    </button>&nbsp;<button type="button" class="btn btn-primary"
+                                        onclick="changeDate(1)">
+                                        +1 Month
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section>
+                <h3 class="text-center">Beers of the Month<span id="date_title"></span></h3>
+                <div class="col-12 row mx-auto" id="monthlyBeers">
+
+                </div>
+                <div class="col-12 row mx-auto d-none d-lg-block" style="position: relative; height:45vh; width:95vw">
+                    <canvas id="beerOfTheMonth"></canvas>
+                </div>
+                <div class="col-12 d-lg-none">
+                    <div class="text-center">Graph only visible on larger screens.</div>
+                </div>
+
+                <hr />
+                <div class="col-12 row" id="monthlyBreweries">
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="js_support/jquery.min.js"></script>
+    <script src="js_support/bootstrap.bundle.min.js"></script>
+    <script src="js_support/moment.min.js"></script>
+    <script src="js_support/chart.js"></script>
+    <script src="js_support/Chart.BoxPlot.min.js"></script>
+    <script src="js_support/chartjs-plugin-datalabels.js"></script>
+
+    <script src="js/beer_of_the_month.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
