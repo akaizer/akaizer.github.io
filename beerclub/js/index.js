@@ -36,7 +36,7 @@ const quantile = (arr, q) => {
 };
 
 // load data and setup UI dropdowns
-$.getJSON("/js/beer.json", data => { beers = data; loadBeerData(); });
+$.getJSON("js/beer.json", data => { beers = data; loadBeerData(); });
 function loadBeerData() {
     let clubs = new Set();
     let years = Object.keys(beers).map(years => parseInt(years));
