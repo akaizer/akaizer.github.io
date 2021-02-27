@@ -114,7 +114,7 @@ function contentConverter(label, key, beer, size) {
     let value = beer[key] != undefined ? beer[key] : "<span class='unknown'>not provided</span>";
     let font_size = size != undefined ? 'font-size: ' + size : '';
     let content = "<div class='row col-12 no-gutters' style='" + font_size + "'>";
-    content += "<div class='col-12 col-md-3'><strong>" + label + "</strong>:</div>";
+    content += "<div class='col-12 col-lg-3'><strong>" + label + "</strong>:</div>";
     content += "<div class='col'>" + value + "</div>";
     content += "</div>";
     return content;
