@@ -30819,6 +30819,154 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "may": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Milk Stout",
+                "Alcohol by Volume": "5.7%",
+                "Serving Temperature": "45-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Nugget, Fuggle",
+                "Malts": "North American Pale, roast malts, unmalted roast barley",
+                "Country": "United States",
+                "brewery": "The Duck-Rabbit Craft Brewery",
+                "name": "The Duck-Rabbit Milk Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Black Ale",
+                "Alcohol by Volume": "7.3%",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Tulip or Snifter",
+                "Hops": "New Zealand Motueka, varied American aromatic hops",
+                "Malts": "Several roast malts",
+                "Country": "United States",
+                "brewery": "The Duck-Rabbit Craft Brewery",
+                "name": "Hoppy Bunny ABA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English-style Summer Ale",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "28",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Opal, Sterling",
+                "Malts": "2-Row, Carapils",
+                "Country": "United States",
+                "brewery": "Uinta Brewing Co.",
+                "name": "Sum’r",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Session IPA",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "50",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Centennial, Ella, Citra",
+                "Malts": "2-Row, Munich, C-40",
+                "Country": "United States",
+                "brewery": "Uinta Brewing Co.",
+                "name": "Trader",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.3%",
+                "Int’l Bittering Units (IBUs)": "75",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Tulip, Snifter, IPA Glass",
+                "Hops": "Galaxy, Chinook",
+                "Malts": "2-Row, Munich, C-40",
+                "Country": "United States",
+                "brewery": "Uinta Brewing Co.",
+                "name": "Hop Nosh",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "4.9%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Country": "Germany",
+                "brewery": "Hofbrauhaus Wolters",
+                "name": "Wolters Pilsener",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Schwarzbier",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Flute, Pilsner Glass, Mug, Stein",
+                "Country": "Germany",
+                "brewery": "Hofbrauhaus Wolters",
+                "name": "Wolters Black",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Hoppy Cedar-Aged Ale w/ Native Yeast & Bacteria",
+                "Alcohol by Volume": "7%",
+                "Serving Temperature": "43–50° F",
+                "Suggested Glassware": "Tulip, Small Nonic, or Chardonnay Glass",
+                "Hops": "Amarillo, Centennial, Simcoe",
+                "Country": "United States",
+                "brewery": "Jester King Brewery",
+                "name": "El Cedro",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Barleywine-Style Ale aged in Bourbon Barrels w/ Coconut",
+                "Alcohol by Volume": "13.1%",
+                "Serving Temperature": "52–58° F",
+                "Suggested Glassware": "Tulip, Teku, Snifter or Pinot glass",
+                "Country": "United States",
+                "brewery": "The Bruery",
+                "name": "Mash & Coconut (2017)",
+                "url": "https://www.beermonthclub.com/past-selections/2021/may",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
