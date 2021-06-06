@@ -30967,6 +30967,171 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "june": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Stout",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Centennial, Palisade",
+                "Malts": "Pilsner, Chocolate, Roasted Barley, Oats, Caramel 20",
+                "Country": "United States",
+                "brewery": "Hamburg Brewing Co.",
+                "name": "Southtown Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Sour Ale with Mango",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "10",
+                "Serving Temperature": "42-50º F",
+                "Suggested Glassware": "Goblet, Tulip, Pint Glass",
+                "Hops": "Lemondrop",
+                "Malts": "Pilsner, Wheat",
+                "Country": "United States",
+                "brewery": "Hamburg Brewing Co.",
+                "name": "Two Two Mango",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA (West Coast style)",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "74",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Columbus, Simcoe, Bravo, Ekuanot, Mosaic",
+                "Malts": "Pilsner, CaraWheat, C-15",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "300",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Blonde Ale",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "29",
+                "Serving Temperature": "43-48º F",
+                "Suggested Glassware": "Pint Glass or Pilsner Glass",
+                "Hops": "Herkules, Tettnang, Hallertau Mittelfrüh",
+                "Malts": "Pilsner, White Wheat, C-15",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "Lonely Blonde",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.9%",
+                "Int’l Bittering Units (IBUs)": "69",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Mosaic, Simcoe, Cascade, Amarillo",
+                "Malts": "Pilsner, Oat",
+                "Country": "United States",
+                "brewery": "Hamburg Brewing Co.",
+                "name": "Louie IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.4%",
+                "Int’l Bittering Units (IBUs)": "69",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Columbus, Simcoe, Glacier",
+                "Malts": "Pilsner, C-60, Wheat",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "Sweet Child of Vine",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Belgian Pale Ale",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "18",
+                "Suggested Glassware": "Tulip, Snifter, Goblet",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Palm",
+                "name": "Palm Spéciale Belge",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Black Lager",
+                "Alcohol by Volume": "4.6%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pint Glass, Oversized Wine Glass",
+                "Country": "Brazil",
+                "brewery": "Cervejaria Sul Brasileira",
+                "name": "Xingu Black Beer",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Tart Farmhouse Ale w/ Riesling & Chardonnay Grapes",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "45–52° F",
+                "Suggested Glassware": "Tulip, Teku, Goblet, or Chardonnay glass",
+                "Country": "United States",
+                "brewery": "Logsdon Farmhouse Ales",
+                "name": "Two Rivers Blanc",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Hazy IPA w/ Passion Fruit & Pineapple",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "43–50° F",
+                "Suggested Glassware": "Nonic, Tulip, or IPA Glass",
+                "Country": "United States",
+                "brewery": "Zipline Brewing Co.",
+                "name": "Tropical Cloudlifter",
+                "url": "https://www.beermonthclub.com/past-selections/2021/june",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
