@@ -31132,6 +31132,191 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "july": [
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Scotch Ale / Wee Heavy",
+                "Alcohol by Volume": "8.0%",
+                "Serving Temperature": "48-55° F",
+                "Suggested Glassware": "Thistle Glass, Tulip, Snifter",
+                "Hops": "Bavarian hops (w/ Icelandic angelica root)",
+                "Malts": "Smoked Icelandic barley, pale ale, crystal, chocolate",
+                "Country": "Iceland",
+                "brewery": "Einstök Ölgerð",
+                "name": "Wee Heavy",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Pale Lager",
+                "Alcohol by Volume": "4.7%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Pilsner Glass, Pint Glass",
+                "Hops": "Hallertau Tradition, Citra & Citra cryo-hops",
+                "Malts": "Pilsner, Munich",
+                "Country": "Iceland",
+                "brewery": "Einstök Ölgerð",
+                "name": "Arctic Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "9.0%",
+                "Int’l Bittering Units (IBUs)": "51",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Tulip, IPA Glass, Snifter",
+                "Hops": "Mosaic, Citra",
+                "Malts": "2-Row, Honey Malt",
+                "Country": "United States",
+                "brewery": "Clown Shoes Beer",
+                "name": "Space Cake",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Dry-hopped Kölsch w/ natural mango flavor",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Stange, Pilsner Glass",
+                "Hops": "Huell Melon",
+                "Malts": "2-Row, Vienna",
+                "Country": "United States",
+                "brewery": "Clown Shoes Beer",
+                "name": "Mangö",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "31",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Mosaic, Citra, Centennial",
+                "Malts": "2-Row, Honey Malt",
+                "Country": "United States",
+                "brewery": "Clown Shoes Beer",
+                "name": "Space Cupcake",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "7.6%",
+                "Int’l Bittering Units (IBUs)": "76",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Tulip, IPA Glass, Snifter",
+                "Hops": "Falconer’s Flight",
+                "Malts": "Pilsner, Munich, Wheat, Carapils, Caramunich 1",
+                "Country": "United States",
+                "brewery": "Adelbert's Brewery",
+                "name": "West Coaster",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Milkshake IPA",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Citra, Simcoe, Mosaic",
+                "Malts": "Pilsner, Wheat, Oats, Carapils (and lactose)",
+                "Country": "United States",
+                "brewery": "Adelbert's Brewery",
+                "name": "Passion Fruit Party",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Amber Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "5.5%",
+                "Suggested Glassware": "Pint Glass or Tulip",
+                "Hops": "Cascade, Centennial",
+                "Malts": "Pilsner, Munich, CaraMunich 1",
+                "Country": "United States",
+                "brewery": "Adelbert's Brewery",
+                "name": "Scratchin’ Hippo",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Saison",
+                "Alcohol by Volume": "7.6%",
+                "Int’l Bittering Units (IBUs)": "28",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Tulip, Oversized Wine Glass",
+                "Hops": "Bravo, Saaz",
+                "Malts": "Pilsner, Munich, CaraMunich 1, Oats, Wheat",
+                "Country": "United States",
+                "brewery": "Adelbert's Brewery",
+                "name": "Philosophizer",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian-Style Tripel",
+                "Alcohol by Volume": "9.3%",
+                "Serving Temperature": "45–55° F",
+                "Suggested Glassware": "Tulip, Teku, Goblet, or Chalice",
+                "Country": "United States",
+                "brewery": "Adelbert's Brewery",
+                "name": "Tripel B",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Blended Barrel-Aged Ale w/ Passion Fruit, Guava & Key Lime",
+                "Alcohol by Volume": "6.5%",
+                "Serving Temperature": "43–50° F",
+                "Suggested Glassware": "Tulip, Teku, or Chardonnay Glass",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Citrus Vacation (RBC Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2021/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
