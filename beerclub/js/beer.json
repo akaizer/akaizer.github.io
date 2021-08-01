@@ -31317,6 +31317,187 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "aug": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Belgian-style Tripel",
+                "Alcohol by Volume": "10.0%",
+                "Int’l Bittering Units (IBUs)": "18",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Tulip, Snifter, Oversized Wine Glass",
+                "Hops": "Chinook, Hallertau, Czech Saaz",
+                "Malts": "Pilsen, White Wheat, Crystal 15",
+                "Country": "United States",
+                "brewery": "River Horse Brewing Co.",
+                "name": "Tripel Horse",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Brown Ale",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "11",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Perle, Saaz",
+                "Malts": "Munich, English, Chocolate",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Dos Perros",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Blonde Ale",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "8",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Falconer’s Flight, Golding, Czech Saaz",
+                "Malts": "Pilsen, Munich, Carapils",
+                "Country": "United States",
+                "brewery": "River Horse Brewing Co.",
+                "name": "Summer Blonde",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hefeweizen",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "17",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Weizen Glass, Pilsner Glass",
+                "Hops": "Perle",
+                "Malts": "Pale, Wheat, Acidulated",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Hefeweizen",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "5.7%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Mug",
+                "Hops": "Chinook, Falconer's Flight, Centennial",
+                "Malts": "Pilsen, CaraPils, Melanoidin, Honey",
+                "Country": "United States",
+                "brewery": "River Horse Brewing Co.",
+                "name": "River Horse IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.8%",
+                "Int’l Bittering Units (IBUs)": "38",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Amarillo, Bravo, Citra",
+                "Malts": "Pale, Flaked Wheat, Flaked Oats, Flaked Barley",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Hopry",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "80",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Strata, Sabro",
+                "Malts": "Pilsner, Malted Oats, Vienna, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Calla",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Morland Brewing (Greene King) - Old Speckled Hen",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pint Glass, Wide Flute",
+                "Country": "England",
+                "brewery": "Morland Brewing",
+                "name": "Old Speckled Hen",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Czech Pilsner",
+                "Alcohol by Volume": "4.4%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Country": "Czech Republic",
+                "brewery": "Měšťanský Pivovar Havlíčkův Brod",
+                "name": "Czech Rebel",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Imperial Witbier w/ lemongrass & orange peel",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "40–47° F",
+                "Suggested Glassware": "Tulip, Goblet, or Chalice Glass",
+                "Country": "United States",
+                "brewery": "River Horse Brewing Co.",
+                "name": "Gentle Giant (RBC Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Imperial Pilsner",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "38–45° F",
+                "Suggested Glassware": "Pilsner, Tulip, Teku, or Nonic",
+                "Country": "United States",
+                "brewery": "Broken Bow Brewery",
+                "name": "Imperial Small Arms Dealer (RBC Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2021/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
