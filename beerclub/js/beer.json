@@ -31498,6 +31498,173 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "sept": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "48",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Simcoe, Columbus",
+                "Malts": "2-Row, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "SweetWater Brewing Co.",
+                "name": "420 Strain G13 IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Blonde Ale",
+                "Alcohol by Volume": "5.3%",
+                "Int’l Bittering Units (IBUs)": "15",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pint Glass or Flute",
+                "Hops": "German Tradition",
+                "Malts": "Pale, Special Roast, Red Wheat, White Wheat, Acidulated",
+                "Country": "United States",
+                "brewery": "O'Fallon Brewery",
+                "name": "Knotty",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Lager",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Flute, Pilsner Glass, Pint Glass",
+                "Hops": "Amarillo, Hallertau Mittelfrüh",
+                "Malts": "Pilsner",
+                "Country": "United States",
+                "brewery": "SweetWater Brewing Co.",
+                "name": "BC Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Smoked Porter",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "24",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Willi Becher, Tulip, Pint Glass",
+                "Hops": "Chinook, German Hallertau Mittelfrüh",
+                "Malts": "Bamburg Smoked, Pale, Caramel 90L, Chocolate, Black, White Wheat",
+                "Country": "United States",
+                "brewery": "O'Fallon Brewery",
+                "name": "Smoke Porter",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "48",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Simcoe, Columbus",
+                "Malts": "2-Row, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "SweetWater Brewing Co.",
+                "name": "H.A.Z.Y. IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Mug",
+                "Hops": "Trident, El Dorado, Citra, Mosaic",
+                "Malts": "Pale, Oats, Wheat, Carapils, Vienna, Honey",
+                "Country": "United States",
+                "brewery": "O'Fallon Brewery",
+                "name": "Foglight",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "4.9%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass, Flute, Stange",
+                "Country": "Germany",
+                "brewery": "Holsten Brauerei",
+                "name": "Astra Urtyp",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Oktoberfest / Märzen",
+                "Alcohol by Volume": "6.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Willi Becher, Mug, Stein, Pint Glass",
+                "Hops": "Siegelhopfen proprietary blend",
+                "Malts": "Pilsner, Munich, Caramel",
+                "Country": "Germany",
+                "brewery": "Bitburger Brauerei",
+                "name": "Bitburger Festbier",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Bourbon-Barrel-Aged Imperial Red Ale",
+                "Alcohol by Volume": "9%",
+                "Serving Temperature": "48–55° F",
+                "Suggested Glassware": "Tulip, Small Nonic, Snifter, or Goblet",
+                "Country": "United States",
+                "brewery": "South Street Brewery",
+                "name": "Imperial Satan’s Pony",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Oak-Aged Sour Red Ale",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "45–52° F",
+                "Suggested Glassware": "Tulip, Snifter, Chalice, or Cab Sauv Glass",
+                "Country": "Italy",
+                "brewery": "Birrificio Torrechiara",
+                "name": "Panil Barriquée (2016 vintage)",
+                "url": "https://www.beermonthclub.com/past-selections/2021/sept",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
