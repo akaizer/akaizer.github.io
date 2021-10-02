@@ -31665,6 +31665,173 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "oct": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Chinook, Amarillo, Mosaic, Mandarina Bavaria",
+                "Malts": "2-Row, Caramel 60, Flaked Oats, Flaked Wheat",
+                "Country": "United States",
+                "brewery": "Tivoli Brewing Co.",
+                "name": "Mountain Squeeze",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Porter w/ Cacao",
+                "Alcohol by Volume": "5.83%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Tulip, Pint Glass, Mug",
+                "Hops": "Cascade",
+                "Malts": "2-Row, Muntons Light Chocolate, Chocolate, Caramunich I, Bonlander Munich, Special B, Dominican Cacao Nibs",
+                "Country": "United States",
+                "brewery": "West Sixth Brewing",
+                "name": "Pay It Forward",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Tall Flute",
+                "Hops": "Saaz, Magnum",
+                "Malts": "Pilsner, Rye, Acidulated",
+                "Country": "United States",
+                "brewery": "Tivoli Brewing Co.",
+                "name": "Bo Girl Pilsner",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Ale",
+                "Alcohol by Volume": "5.38%",
+                "Int’l Bittering Units (IBUs)": "50",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Citra, Mosaic",
+                "Malts": "2-Row, Goldpils Vienna, C-60",
+                "Country": "United States",
+                "brewery": "West Sixth Brewing",
+                "name": "Pennyrile Pale Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.61%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "IPA Glass, Tulip",
+                "Suggested Glassware": "IPA Glass, Tulip",
+                "Hops": "Citra, Simcoe, Strata",
+                "Malts": "2-Row, Vienna, C-60",
+                "brewery": "West Sixth Brewing",
+                "name": "Hop Static Ch. 3",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.83%",
+                "Int’l Bittering Units (IBUs)": "70",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Citra, Centennial, Cascade, Zeus",
+                "Malts": "2-Row, Honey Malt, Carared, Carapils, Flaked Barley",
+                "Country": "United States",
+                "brewery": "West Sixth Brewing",
+                "name": "West Sixth IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Dunkel Bockq",
+                "Alcohol by Volume": "7.2%",
+                "Int’l Bittering Units (IBUs)": "27",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Tulip, Snifter, Wide Flute",
+                "Hops": "Nugget, Sladek",
+                "Country": "Spain",
+                "brewery": "Hijos de Rivera",
+                "name": "1906 Black Coupage",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Helles Bock / Maibock",
+                "Alcohol by Volume": "6.5%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Flute, Pilsner Glass, Mug",
+                "Hops": "Perle",
+                "Country": "Spain",
+                "brewery": "Hijos de Rivera",
+                "name": "1906 Reserva Especial",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Quadrupel w/ Scottish Heather Honey & American Hops",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Tulip, Chalice, Snifter, or Goblet",
+                "Country": "Netherlands",
+                "brewery": "Bierbrouwerij de Koningshoeven B.V. (w/ BrewDog)",
+                "name": "Practise What You Preach",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Grisette w/ Lime & Dried Marigold Flowers",
+                "Alcohol by Volume": "4.6%",
+                "Serving Temperature": "42–49° F",
+                "Suggested Glassware": "Chalice, Tulip, Nonic, or Chardonnay Glass",
+                "Country": "United States",
+                "brewery": "Jolly Pumpkin Artisan Ales",
+                "name": "Flor De Los Muertos",
+                "url": "https://www.beermonthclub.com/past-selections/2021/oct",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
