@@ -31832,6 +31832,187 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "nov": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Brown Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "38",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Cascade, Mosaic",
+                "Malts": "Imported Malts",
+                "Country": "United States",
+                "brewery": "Geary Brewing Co.",
+                "name": "Off Trail Brown Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Irish Red Ale",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "23",
+                "Serving Temperature": "48-53º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Willamette, Fuggle",
+                "Malts": "2-Row Brewer’s, 2-Row Caramel 80L, Roasted Barley",
+                "Country": "United States",
+                "brewery": "Old Bust Head Brewing Co.",
+                "name": "Vixen",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English Pale Ale",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "38",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Cascade, Mt. Hood, UK Golding",
+                "Malts": "Imported Malts",
+                "Country": "United States",
+                "brewery": "Geary Brewing Co.",
+                "name": "Original Pale Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Coffee Oatmeal Stout",
+                "Alcohol by Volume": "5.7%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Tulip or Snifter",
+                "Hops": "Liberty, Fuggle, Select",
+                "Malts": "2-Row Brewer’s, Carapils, 2-Row Caramel 40, 2-Row Caramel 80, Chocolate Malt, Special B, Roasted Barley, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Old Bust Head Brewing Co.",
+                "name": "Caramel Macchiato Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Simcoe, Mosaic, Citra",
+                "Malts": "Domestic and Imported Malts",
+                "Country": "United States",
+                "brewery": "Geary Brewing Co.",
+                "name": "Haze Trip",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hazy Session IPA",
+                "Alcohol by Volume": "4.0%",
+                "Int’l Bittering Units (IBUs)": "48",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Mosaic, Mandarina Bavaria, Citra",
+                "Malts": "Domestic and Imported Malts",
+                "Country": "United States",
+                "brewery": "Geary Brewing Co.",
+                "name": "Day Trip",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA (West Coast style)",
+                "Alcohol by Volume": "7.5%",
+                "Int’l Bittering Units (IBUs)": "75",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Cascade, Mosaic, Mosaic (Incognito)",
+                "Malts": "2-Row Brewer’s, 2-Row Carapils, 2-Row Caramel 10L, Special Roast",
+                "Country": "United States",
+                "brewery": "Old Bust Head Brewing Co.",
+                "name": "Graffiti House",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Witbier",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Tulip or Pint Glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij De Brabandere",
+                "name": "Bavik Super Wit",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Festbier",
+                "Alcohol by Volume": "6.1%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Mug or Stein",
+                "Country": "Germany",
+                "brewery": "Hofbrauhaus Freising",
+                "name": "Festbier",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Flemish Red Brown (a blend of oak-aged brown beer & young blond beer)",
+                "Alcohol by Volume": "6%",
+                "Serving Temperature": "50–59° F",
+                "Suggested Glassware": "Tulip, Chalice, Goblet, or Pinot glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij De Leite",
+                "name": "Cuvée Oncle Pol",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian Strong Golden Ale",
+                "Alcohol by Volume": "9.8%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Chalice, Goblet, or Tulip",
+                "Country": "Belgium",
+                "brewery": "Brouwerij t'Gaverhopke",
+                "name": "Zingende Blondine",
+                "url": "https://www.beermonthclub.com/past-selections/2021/nov",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
