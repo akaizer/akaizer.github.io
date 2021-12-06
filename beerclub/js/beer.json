@@ -32013,6 +32013,171 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "dec": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Winter Warmer",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "23",
+                "Serving Temperature": "48-53º F",
+                "Suggested Glassware": "Tulip or Snifter",
+                "Hops": "Apollo, Northern Brewer",
+                "Malts": "2-Row, Dark Caramel, Victory, Chocolate",
+                "Country": "United States",
+                "brewery": "Harpoon Brewery",
+                "name": "Winter Warmer",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Ale",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "31",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Summit, Cascade",
+                "Malts": "2-Row Pale, Dextrin, Pale Wheat",
+                "Country": "United States",
+                "brewery": "Brothers Craft Brewing",
+                "name": "The Great Outdoors",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England Hazy IPA",
+                "Alcohol by Volume": "7.2%",
+                "Int’l Bittering Units (IBUs)": "50",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Tulip",
+                "Hops": "Cascade, Simcoe, Ekuanot, Citra, Mosaic",
+                "Malts": "2-Row, Oat Malt, Roasted Oats, Wheat Malt, Buckwheat Kasha, Chia Seeds",
+                "Country": "United States",
+                "brewery": "Harpoon Brewery",
+                "name": "Big League",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Amber Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "24",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Summit, Centennial, Cascade",
+                "Malts": "Maris Otter, Munich, Crystal Light, C120, Victory",
+                "Country": "United States",
+                "brewery": "Brothers Craft Brewing",
+                "name": "American Amber Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.1%",
+                "Int’l Bittering Units (IBUs)": "70",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Apollo, Cascade, Centennial, Columbus",
+                "Malts": "2-Row, Carared, Dextrin",
+                "Country": "United States",
+                "brewery": "Brothers Craft Brewing",
+                "name": "Hoptimization",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English-style IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "42",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Apollo, Chinook, Cascade",
+                "Malts": "2-Row, Victory, Caramel",
+                "Country": "United States",
+                "brewery": "Harpoon Brewery",
+                "name": "Harpoon IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Kellerbier",
+                "Alcohol by Volume": "5.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Mug or Stein",
+                "Country": "Germany",
+                "brewery": "Brauerei C. & A. Veltins",
+                "name": "Grevensteiner Original",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "4.8%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Country": "Germany",
+                "brewery": "Brauerei C. & A. Veltins",
+                "name": "Veltins Pilsener",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Russian-style Imperial Stout w/ Roasted Coffee Beans & Belgian Chocolate",
+                "Alcohol by Volume": "11%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Snifter, Small Nonic, or Tulip",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Maenhout (w/ Boom Island Brewing Co.)",
+                "name": "Kollusion",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Oak-aged Belgian Strong Ale (aged in Sherry & Whisky barrels)",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "44–52° F",
+                "Suggested Glassware": "Tulip, Chalice, Goblet, or Pinot glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Roman",
+                "name": "Adriaen Brouwer Oaked",
+                "url": "https://www.beermonthclub.com/past-selections/2021/dec",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
