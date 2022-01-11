@@ -32179,5 +32179,191 @@
                 ]
             }
         ]
+    },
+    "2022": {
+        "jan": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Oatmeal Stout",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "26",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Chinook, Cascade, Michigan Copper",
+                "Malts": "Brewer’s 2-Row, Caramel 80, Munich 20, Chocolate, Black, Roast, Oats",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "Back Road Oatmeal Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Tripel",
+                "Alcohol by Volume": "8.4%",
+                "Int’l Bittering Units (IBUs)": "14",
+                "Serving Temperature": "45-52º F",
+                "Suggested Glassware": "Tulip, Snifter, or Goblet",
+                "Hops": "Tettnanger",
+                "Malts": "Pilsen, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Sprecher Brewing Co.",
+                "name": "Abbey Triple",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Vienna Lager",
+                "Alcohol by Volume": "5.3%",
+                "Int’l Bittering Units (IBUs)": "17",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass or Flute",
+                "Hops": "Chinook, German Tradition",
+                "Malts": "Brewer’s 2-Row, Ashburn, Munich 20, Caramel 60",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "Schild Brau Amber",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "47-55º F",
+                "Suggested Glassware": "Pilsner Glass or Mug",
+                "Hops": "Mt. Hood, Cascade, Chinook, Tettnanger",
+                "Malts": "Pilsen, Caramel 20L, Caramel 60L, Black, Chocolate",
+                "Country": "United States",
+                "brewery": "Sprecher Brewing Co.",
+                "name": "Black Bavarian",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England IPA w/ Grapefruit",
+                "Alcohol by Volume": "6.8%",
+                "Int’l Bittering Units (IBUs)": "57",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Chinook, Centennial, Warrior, Rakau, Amarillo",
+                "Malts": "Brewer’s 2-Row, Wheat, Rye, Oats",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "Millie Hop",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Session IPA",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Mug",
+                "Hops": "Zythos, Mosaic, Centennial",
+                "Malts": "Pilsen, Pale Ale, Carapils, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "Sprecher Brewing Co.",
+                "name": "Juicy IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Belgian-style IPA",
+                "Alcohol by Volume": "8.4%",
+                "Int’l Bittering Units (IBUs)": "55",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Tulip, Snifter, IPA Glass",
+                "Hops": "Tettnanger, Mosaic, Ekuanot",
+                "Malts": "Pilsen, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Sprecher Brewing Co.",
+                "name": "Pineapple X-Press",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Weizenbock",
+                "Alcohol by Volume": "7.7%",
+                "Int’l Bittering Units (IBUs)": "17",
+                "Serving Temperature": "45-52° F",
+                "Suggested Glassware": "Goblet, Chalice, Tulip, Flute",
+                "Hops": "Perle, Magnum",
+                "Malts": "Light Barley Malt, Wheat Malt",
+                "Country": "Germany",
+                "brewery": "Bayerische Staatsbrauerei Weihenstephan",
+                "name": "Vitus",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "440-ml",
+                "Style": "Irish Red Ale (Nitrogenated)",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "23",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Challenger, Admiral, Boadicea, First Gold, Wye Goldings",
+                "Country": "England",
+                "brewery": "Greene King Brewery",
+                "name": "Wexford Irish Style Crème Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Alcohol by Volume": "10.5%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Snifter, Chalice, Tulip, or Teku",
+                "Country": "United States",
+                "brewery": "BJ's Brewhouse Beer Club",
+                "name": "BJ’s Barleywine Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Imperial Stout",
+                "Alcohol by Volume": "11.5%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Snifter, Small Nonic, or Tulip Glass",
+                "Country": "Canada",
+                "brewery": "Les Trois Mousquetaires",
+                "name": "Grande Cuvée Stout Impériale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/jan",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ]
     }
 }
