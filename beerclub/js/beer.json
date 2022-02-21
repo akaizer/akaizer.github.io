@@ -32364,6 +32364,187 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "feb": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Robust Porter",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Pint Glass or Tulip",
+                "Hops": "Delta",
+                "Malts": "Golden Promise, Chocolate, Brown, Roasted Barley, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Green Man Brewery",
+                "name": "Porter",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Strong Ale",
+                "Alcohol by Volume": "7.3%",
+                "Int’l Bittering Units (IBUs)": "77",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Snifter, Tulip, or Pint Glass",
+                "Hops": "Cascade, Centennial",
+                "Malts": "2-Row Pale, Crystal, Wheat Malt, Aromatic, Special B",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "SheepHead",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "ESB",
+                "Alcohol by Volume": "32",
+                "Int’l Bittering Units (IBUs)": "5.5%",
+                "Serving Temperature": "47-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Fuggle",
+                "Malts": "Golden Promise, Double-Roasted Crystal, Brown, Chit, Chocolate",
+                "Country": "United States",
+                "brewery": "Green Man Brewery",
+                "name": "ESB",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Czech Pilsner",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "Unknown",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Sterling, Saaz",
+                "Malts": "Vienna, 2-Row Pale, Dextrin, Acidulated",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "Thresher",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "76",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, or Mug",
+                "Hops": "El Dorado, Mosaic, Simcoe",
+                "Malts": "Golden Promise, Rahr 2-Row, White Wheat, Chit, Acidulated",
+                "Country": "United States",
+                "brewery": "Green Man Brewery",
+                "name": "Trickster",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.8%",
+                "Int’l Bittering Units (IBUs)": "70",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, or Mug",
+                "Hops": "Centennial, El Dorado, Cascade",
+                "Malts": "Vienna, Pale, Carafoam, Caramalt, Acidulated",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "3 Trees IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "63",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, or Mug",
+                "Hops": "Cascade, Centennial, Columbus",
+                "Malts": "Golden Promise, Crystal T50, Chit",
+                "Country": "United States",
+                "brewery": "Green Man Brewery",
+                "name": "IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Doppelbock",
+                "Alcohol by Volume": "7.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Tulip, Snifter",
+                "Country": "Germany",
+                "brewery": "Arcobräu Gräfliches Brauhaus",
+                "name": "Coronator",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Zwickelbier",
+                "Alcohol by Volume": "5.2%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Stange, Pilsner Glass, Mug",
+                "Country": "Germany",
+                "brewery": "Arcobräu Gräfliches Brauhaus",
+                "name": "Zwickl Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Blend of Imperial Stout & Bourbon-Barrel-Aged Barleywine",
+                "Alcohol by Volume": "12%",
+                "Serving Temperature": "40–45° F",
+                "Suggested Glassware": "Snifter, Chalice, Tulip, or Teku",
+                "Country": "United States",
+                "brewery": "The Lost Abbey",
+                "name": "Baby Moses",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Vintage Oak-Aged Oude Kriek",
+                "Alcohol by Volume": "6%",
+                "Serving Temperature": "46–54° F",
+                "Suggested Glassware": "Lambic Tumbler, Flute, or Tulip Glass",
+                "Country": "Belgium",
+                "brewery": "Oud Beersel",
+                "name": "Oude Kriek Vieille 2014",
+                "url": "https://www.beermonthclub.com/past-selections/2022/feb",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
