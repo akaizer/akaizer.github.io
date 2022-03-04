@@ -32545,6 +32545,173 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "mar": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English Porter",
+                "Alcohol by Volume": "5.8%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Willamette",
+                "Malts": "Pale, Caramel 20, Caramel 60, Caramel 120, Dark Chocolate, Midnight Wheat",
+                "Country": "United States",
+                "brewery": "Foothills Brewing",
+                "name": "People's Porter",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Cascadian Dark Ale",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Pint Glass or Tulip",
+                "Hops": "Columbus, Mt. Hood",
+                "Malts": "Pale, Black, Crystal 75",
+                "Country": "United States",
+                "brewery": "Dick's Brewing Co.",
+                "name": "Dick Danger Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Witbier",
+                "Alcohol by Volume": "5.1%",
+                "Int’l Bittering Units (IBUs)": "5",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Flute, Tulip, Pint Glass",
+                "Hops": "Azacca",
+                "Malts": "Superior Pilsen, Carolina Red Wheat, Acidulated, Carolina Oat Malt",
+                "Country": "United States",
+                "brewery": "Foothills Brewing",
+                "name": "Good Ship Wit",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "65",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Citra, Azacca, Simcoe, Centennial",
+                "Malts": "Pale, Crystal 15, Carapils, Munich",
+                "Country": "United States",
+                "brewery": "Dick's Brewing Co.",
+                "name": "India Pale Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.4%",
+                "Int’l Bittering Units (IBUs)": "82",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Apollo, Citra, Azacca, Cascade, Pacific Jade",
+                "Malts": "Superior Pilsen, Caramel 60, Acidulated",
+                "Country": "United States",
+                "brewery": "Foothills Brewing",
+                "name": "Jade IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA w/ Grapefruit",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Cascade, Centennial, Trident",
+                "Malts": "Pale, Crystal 15, Vienna, Carapils",
+                "Country": "United States",
+                "brewery": "Dick's Brewing Co.",
+                "name": "Grapefruit IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Irish Red Ale",
+                "Alcohol by Volume": "4.3%",
+                "Int’l Bittering Units (IBUs)": "43-48° F",
+                "Serving Temperature": "34",
+                "Suggested Glassware": "Tulip or Pint Glass",
+                "Country": "Ireland",
+                "brewery": "Carlow Brewing Co.",
+                "name": "O'Hara's Irish Red",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "440-ml",
+                "Style": "Irish Dry Stout",
+                "Alcohol by Volume": "4.3%",
+                "Int’l Bittering Units (IBUs)": "36",
+                "Serving Temperature": "48-55° F",
+                "Suggested Glassware": "Tulip or Pint Glass",
+                "Country": "Ireland",
+                "brewery": "Carlow Brewing Co.",
+                "name": "O’Hara’s Irish Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Imperial Porter w/ Vanilla & Coffee Beans",
+                "Alcohol by Volume": "9.8%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Snifter, Tulip, or Small Nonic",
+                "Country": "United States",
+                "brewery": "O'so Brewing Co.",
+                "name": "Convenient Distraction",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Blonde Ale & Lambic Sour Ale Blend",
+                "Alcohol by Volume": "6.5%",
+                "Serving Temperature": "45–53° F",
+                "Suggested Glassware": "Tulip, Lambic Tumbler, Flute, or Chardonnay Glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Kerkom",
+                "name": "Reuss",
+                "url": "https://www.beermonthclub.com/past-selections/2022/mar",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
