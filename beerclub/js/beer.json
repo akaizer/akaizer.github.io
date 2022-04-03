@@ -32712,6 +32712,169 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "apr": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English Brown Ale w/ Pecans",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Nugget, Willamette",
+                "Malts": "Caramel Malt, Maris Otter, Wheat, Roasted Pecans",
+                "Country": "United States",
+                "brewery": "Lazy Magnolia Brewing Co.",
+                "name": "Southern Pecan",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Golden/Blonde Ale",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Flute, Pint Glass",
+                "Hops": "Saaz, Comet",
+                "Malts": "2-Row",
+                "Country": "United States",
+                "brewery": "Roadhouse Brewing Co.",
+                "name": "Family Vacation",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English Brown Ale w/ Pecans & Vanilla",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Nugget, Willamette",
+                "Malts": "Caramel Malt, Maris Otter, Wheat, Roasted Pecans, Madagascar Vanilla Beans",
+                "Country": "United States",
+                "brewery": "Lazy Magnolia Brewing Co.",
+                "name": "Vanilla Pecan",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Citra, Chinook, Zeus",
+                "Malts": "2-Row, Carafoam",
+                "Country": "United States",
+                "brewery": "Roadhouse Brewing Co.",
+                "name": "Wilson",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Imperial Rye IPA",
+                "Alcohol by Volume": "9.0%",
+                "Int’l Bittering Units (IBUs)": "80",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Tulip, Snifter, IPA Glass",
+                "Hops": "Nugget, Galaxy, Simcoe, Centennial",
+                "Malts": "2-Row, Crystal, Carapils, Rye",
+                "Country": "United States",
+                "brewery": "Lazy Magnolia Brewing Co.",
+                "name": "Timber Beast",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hazy Brut Double IPA",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Tulip, Snifter, IPA Glass",
+                "Hops": "Nelson Sauvin, Strata, Idaho 7, Chinook, Centennial, Zeus",
+                "Malts": "2-Row, Carafoam, Oats",
+                "Country": "United States",
+                "brewery": "Roadhouse Brewing Co.",
+                "name": "The Prophet",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Belgian Saison",
+                "Alcohol by Volume": "6.5%",
+                "Serving Temperature": "45-55° F",
+                "Suggested Glassware": "Tulip",
+                "Country": "Belgium",
+                "brewery": "Brasserie Dupont",
+                "name": "Saison Dupont",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "440-ml",
+                "Style": "Dry Stout",
+                "Alcohol by Volume": "4.2%",
+                "Serving Temperature": "50-55° F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Challenger",
+                "Country": "Scotland",
+                "brewery": "Belhaven Brewery Co. Ltd.",
+                "name": "Belhaven Black",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian Strong Dark Ale",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Tulip, Chalice, Goblet, or Snifter",
+                "Country": "Denmark",
+                "brewery": "Mikkeller",
+                "name": "Monk's Brew 2017",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Strong Saison w/ Matcha Green Tea",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "45–52° F",
+                "Suggested Glassware": "Tulip, Chalice, Nonic, or Chardonnay Glass",
+                "Country": "Canada",
+                "brewery": "Brasserie Dunham",
+                "name": "Concubine (RBC Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2022/apr",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
