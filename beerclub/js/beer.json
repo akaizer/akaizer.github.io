@@ -32875,6 +32875,187 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "may": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Dry-hopped American Pilsner",
+                "Alcohol by Volume": "4.6%",
+                "Int’l Bittering Units (IBUs)": "38",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Chinook, Summit, Citra",
+                "Malts": "Pilsner, Wheat",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "Fresh Cut",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Kölsch",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "22",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Stange, Pilsner Glass, Flute",
+                "Hops": "Sterling, Hallertau Blanc, Smaragd",
+                "Malts": "2-Row Pale, Barke Pilsner, Red Wheat, Munich",
+                "Country": "United States",
+                "brewery": "August Schell Brewing Co.",
+                "name": "Lake Escape",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pilsner",
+                "Alcohol by Volume": "4.7%",
+                "Int’l Bittering Units (IBUs)": "15",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Citra",
+                "Malts": "Pale, Wheat",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "Happy Hour",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Wheat Ale with Citrus",
+                "Alcohol by Volume": "3.9%",
+                "Int’l Bittering Units (IBUs)": "10",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Flute, Pint Glass",
+                "Hops": "Calypso, Cascade",
+                "Malts": "2-Row Pale, Wheat, Munich, Dextrose",
+                "Country": "United States",
+                "brewery": "August Schell Brewing Co.",
+                "name": "LoCal Twist",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.1%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, or Mug",
+                "Hops": "Amarillo, Simcoe, Nugget",
+                "Malts": "Pale, Crystal 60",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hoppy American Wheat Ale",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "61",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Amarillo",
+                "Malts": "Pale, Carapils, Wheat",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "Summer Session",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA with Citrus Peel & Vanilla",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "69",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, or Mug",
+                "Hops": "Lotus, Centennial, Citra, Saaz, Simcoe",
+                "Malts": "2 Row, Light Crystal",
+                "Country": "United States",
+                "brewery": "Two Brothers Brewing Co.",
+                "name": "Pinch of Grace",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Festbier",
+                "Alcohol by Volume": "5.8%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Willi Becher, Mug, Stein, Pint Glass",
+                "Country": "Germany",
+                "brewery": "Tucher Bräu",
+                "name": "Festbier",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Hefeweizen",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Weizen Glass, Pilsner Glass",
+                "Country": "Austria",
+                "brewery": "Brauerei Schloss Eggenberg",
+                "name": "Helle Weizen",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Scottish-Style Gruit Ale",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "48–55° F",
+                "Suggested Glassware": "Tulip, Nonic, or Thistle Glass",
+                "Country": "Netherlands",
+                "brewery": "Jopen B.V.",
+                "name": "Gritty Young Thing",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Stout with Maple Syrup, Vanilla & Cacao Nibs",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "52–58° F",
+                "Suggested Glassware": "Snifter, Small Nonic, or Tulip",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "Thunder God",
+                "url": "https://www.beermonthclub.com/past-selections/2022/may",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
