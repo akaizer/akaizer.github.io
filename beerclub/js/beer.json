@@ -33056,6 +33056,191 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "june": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "German-style Pilsner",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Saphir, Hallertau Mittelfrüh",
+                "Malts": "Pilsner, Carafoam",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "P1 Pilsner",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Bavarian-style Weissbier / Hefeweizen",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "13",
+                "Serving Temperature": "42-50º F",
+                "Suggested Glassware": "Weizen Glass, Pilsner Glass",
+                "Hops": "Perle",
+                "Malts": "Wheat, Pils",
+                "Country": "United States",
+                "brewery": "KC Bier Co.",
+                "name": "Hefe-Weizen",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Scotch Ale / Wee Heavy",
+                "Alcohol by Volume": "9.0%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Thistle Glass, Tulip, Snifter",
+                "Hops": "Zeus, Willamette",
+                "Malts": "2-Row, Munich, Crystal 150, Crystal 40",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Kilted Harley",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Munich-style Dunkel",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "18",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Flute, Pilsner Glass",
+                "Hops": "Perle",
+                "Malts": "Munich, Pils, Melanoidin, Aroma",
+                "Country": "United States",
+                "brewery": "KC Bier Co.",
+                "name": "Dunkel",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "9.0%",
+                "Int’l Bittering Units (IBUs)": "75",
+                "Serving Temperature": "48-53º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Snifter",
+                "Hops": "Zeus, Cascade, Centennial, Comet, Chinook, Galena",
+                "Malts": "2-Row, Munich, Wheat, Crystal 40",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Slipstream",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "50",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Cascade, Centennial, El Dorado, Mandarina, Galena",
+                "Malts": "2-Row, Wheat, Oats, Munich, Crystal 40",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Daytona",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "42",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Perle, Ariana, Amarillo",
+                "Malts": "Pils, Vienna",
+                "Country": "United States",
+                "brewery": "KC Bier Co.",
+                "name": "Noble IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Kölsch",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Stange, Pilsner Glass",
+                "Hops": "Hallertauer Perle, Hallertauer Magnum",
+                "Country": "Germany",
+                "brewery": "Privatbrauerei Gaffel Becker & Co.",
+                "name": "Gaffel Kölsch",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Czech / Bohemian Pilsner",
+                "Alcohol by Volume": "4.9%",
+                "Int’l Bittering Units (IBUs)": "37",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass, Willi Becher, Mug",
+                "Hops": "Saaz",
+                "Country": "Czech Republic",
+                "brewery": "Rodinný Pivovar Bernard",
+                "name": "Bohemian Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Blackberry Imperial Porter",
+                "Alcohol by Volume": "8.5%",
+                "Serving Temperature": "50–56° F",
+                "Suggested Glassware": "Snifter, Small Nonic, or Tulip",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "Rubus Black",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Dark Berlin-Style Weisse Beer",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "42–46° F",
+                "Suggested Glassware": "Tulip, Nonic, or Pokal Glass",
+                "Country": "United States",
+                "brewery": "August Schell Brewing Co.",
+                "name": "Noble Star Collection: Lunar Interference (2017)",
+                "url": "https://www.beermonthclub.com/past-selections/2022/june",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
