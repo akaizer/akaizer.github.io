@@ -33241,6 +33241,189 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "july": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy Pale Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass, IPA Glass, Mug",
+                "Hops": "Sabro, Idaho Gem, Amarillo",
+                "Malts": "2-Row, Flaked Oats, White Wheat, Dextrapils, Chit Malt, Acidulated Malt, Caramel Steam Malt, Rice Hulls",
+                "Country": "United States",
+                "brewery": "Roughtail Brewing Co.",
+                "name": "Frickin’ Hazer Beams",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Amber/Red Ale",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Chinook, Hallertau Mittelfrüh",
+                "Malts": "Pilsner Malt, Wheat Malt, CaraMalt, Roasted Barely",
+                "Country": "United States",
+                "brewery": "DuClaw Brewing Co.",
+                "name": "Misfit Red",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hefeweizen",
+                "Alcohol by Volume": "5.1%",
+                "Int’l Bittering Units (IBUs)": "11",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Weizen Glass, Pilsner Glass",
+                "Hops": "Hallertau Tradition",
+                "Malts": "2-Row, White Wheat, Dextrapils, Chit Malt, Rice Hulls, Acidulated Malt",
+                "Country": "United States",
+                "brewery": "Roughtail Brewing Co.",
+                "name": "Polterweisse",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Fruited Sour Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "10",
+                "Serving Temperature": "42-50º F",
+                "Suggested Glassware": "Tulip or Pint Glass",
+                "Hops": "Saaz",
+                "Malts": "Pilsner, Red Wheat, Unmalted Wheat",
+                "Country": "United States",
+                "brewery": "DuClaw Brewing Co.",
+                "name": "Lil’ Sour Me America",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.5%",
+                "Int’l Bittering Units (IBUs)": "55",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Citra, Mosaic, Simcoe",
+                "Malts": "2-Row, White Wheat, Flaked Oats, Dextrapils, Caramel Steam, Acidulated Malt, Rice Hulls",
+                "Country": "United States",
+                "brewery": "Roughtail Brewing Co.",
+                "name": "Everything Rhymes with Orange",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.3%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "IPA Glass or Pint Glass",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Citra, Amarillo",
+                "Malts": "Pilsner, Flaked Oats, Torrified Wheat",
+                "Country": "United States",
+                "brewery": "DuClaw Brewing Co.",
+                "name": "Haze of Glory",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Session IPA",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Sultana, Simcoe, Motueka, Lemondrop",
+                "Malts": "Pilsner, Raw Wheat, Vienna, Dextrine",
+                "Country": "United States",
+                "brewery": "DuClaw Brewing Co.",
+                "name": "Relaxed Fit",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Vienna Lager",
+                "Alcohol by Volume": "5.3%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Flute, Pilsner Glass",
+                "Hops": "Saaz",
+                "Malts": "Vienna, Melanoidin",
+                "Country": "Austria",
+                "brewery": "Ottakringer Brauerei",
+                "name": "Vienna Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Organic Saison",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "45-55° F",
+                "Suggested Glassware": "Tulip, Flute",
+                "Country": "Belgium",
+                "brewery": "Brasserie Dupont",
+                "name": "Forêt",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Tripel",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "40–47° F",
+                "Suggested Glassware": "Chalice, Goblet, or Tulip Glass",
+                "Country": "Belgium",
+                "brewery": "Hof Ten Dormaal",
+                "name": "Tripel",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Amber Quadrupel",
+                "Alcohol by Volume": "12.8%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Goblet, Chalice, or Tulip Glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Alvinne",
+                "name": "Land Van Mortagne",
+                "url": "https://www.beermonthclub.com/past-selections/2022/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
