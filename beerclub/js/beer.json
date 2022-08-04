@@ -33424,6 +33424,171 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "aug": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Czech Pilsner",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "15",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Tettnang, Saaz",
+                "Malts": "Pilsen, Munich, Dextra-Pils",
+                "Country": "United States",
+                "brewery": "Sumerian Brewing Co.",
+                "name": "Lucidity",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Wheat Ale w/ Orange Peel",
+                "Alcohol by Volume": "4.6%",
+                "Int’l Bittering Units (IBUs)": "9",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Flute, Pint Glass",
+                "Hops": "Magnum, Crystal",
+                "Malts": "2-Row, Wheat",
+                "Country": "United States",
+                "brewery": "O'so Brewing Co.",
+                "name": "The Big 2.0",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Session IPA",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Cascade, Citra, Centennial, CTZ",
+                "Malts": "2-Row, Munich, Crystal, Dextra-Pils",
+                "Country": "United States",
+                "brewery": "Sumerian Brewing Co.",
+                "name": "Holy Water",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "Hop Heads Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Amber/Red Ale",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "17",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Magnum",
+                "Malts": "2-Row, Munich, Vienna, Specialty Malts",
+                "Country": "United States",
+                "brewery": "O'so Brewing Co.",
+                "name": "Rusty Red",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "8.0%",
+                "Int’l Bittering Units (IBUs)": "95",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Tulip, Snifter",
+                "Hops": "Cascade, Centennial, Mosaic, Citra",
+                "Malts": "2-Row, Munich, C15",
+                "Country": "United States",
+                "brewery": "Sumerian Brewing Co.",
+                "name": "Hopruption",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Ale",
+                "Alcohol by Volume": "5.6%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "43-48º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Summit, Cascade",
+                "Malts": "2-Row, Munich",
+                "Country": "United States",
+                "brewery": "O'so Brewing Co.",
+                "name": "Hop Dinger",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Tmavé Pivo / Czech Dark Lager",
+                "Alcohol by Volume": "4.7%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Mug, Stein, Flute",
+                "Country": "Czech Republic",
+                "brewery": "Měšťanský Pivovar Havlíčkův Brod",
+                "name": "Lev Black Lion",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Maibock",
+                "Alcohol by Volume": "5.9%",
+                "Serving Temperature": "42-48° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Country": "Czech Republic",
+                "brewery": "Měšťanský Pivovar Havlíčkův Brod",
+                "name": "Lev Gold Lion",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Bourbon Barrel-Aged Imperial Stout",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Snifter, Small Nonic, or Tulip Glass",
+                "Country": "United States",
+                "brewery": "Blue Mountain Barrel House",
+                "name": "Dark Hollow",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian-Style Dubbel",
+                "Alcohol by Volume": "7%",
+                "Serving Temperature": "47–54° F",
+                "Suggested Glassware": "Chalice, Goblet, or Tulip Glass",
+                "Country": "United States",
+                "brewery": "Barrel of Monks Brewing",
+                "name": "Abbey Terno",
+                "url": "https://www.beermonthclub.com/past-selections/2022/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
