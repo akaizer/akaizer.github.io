@@ -33589,6 +33589,187 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "sept": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Blonde Ale",
+                "Alcohol by Volume": "3.6%",
+                "Int’l Bittering Units (IBUs)": "14",
+                "Serving Temperature": "Pint Glass or Flute",
+                "Suggested Glassware": "40-45º F",
+                "Hops": "Warrior, Centennial",
+                "Malts": "2-Row, White Wheat, Carapils, Flaked Barley",
+                "Country": "United States",
+                "brewery": "Bent River Brewing Co.",
+                "name": "Mississippi Blonde",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "17",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Mug",
+                "Hops": "Nugget, Cashmere",
+                "Malts": "Pilsner, Crystal, Munich",
+                "Country": "United States",
+                "brewery": "Flying Fish Brewing Co.",
+                "name": "Hopfish",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Oatmeal Coffee Stout",
+                "Alcohol by Volume": "6.4%",
+                "Int’l Bittering Units (IBUs)": "31",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Perle, Centennial",
+                "Malts": "2-Row, Chocolate, Midnight Wheat, Roasted Barley, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Bent River Brewing Co.",
+                "name": "Uncommon Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Fruited Gose",
+                "Alcohol by Volume": "4.3%",
+                "Int’l Bittering Units (IBUs)": "10",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Flute, Stange, Pilsner Glass",
+                "Hops": "Columbus",
+                "Malts": "Pilsner, Wheat, Acidulated",
+                "Country": "United States",
+                "brewery": "Flying Fish Brewing Co.",
+                "name": "Salt and Sea",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.8%",
+                "Int’l Bittering Units (IBUs)": "66",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Warrior, Cascade, CTZ, Centennial, Citra",
+                "Malts": "2-Row, Caramunich, Caramel 40, White Wheat, Victory",
+                "Country": "United States",
+                "brewery": "Bent River Brewing Co.",
+                "name": "Undercurrent IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "7.5%",
+                "Int’l Bittering Units (IBUs)": "51",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Mosaic, Citra",
+                "Malts": "2-Row, Flaked Oats, Malted Oats, Flaked Wheat, Malted Wheat",
+                "Country": "United States",
+                "brewery": "Bent River Brewing Co.",
+                "name": "QC Haze",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.3%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Citra, Amarillo, Simcoe, Cascade",
+                "Malts": "Vienna, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "Flying Fish Brewing Co.",
+                "name": "Hazy Bones",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Oude Bruin",
+                "Alcohol by Volume": "5.5%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Tulip, Snifter",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Van Steenberge",
+                "name": "Monk’s Cafe",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "German-style Pilsner",
+                "Alcohol by Volume": "5.2%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Country": "Belgium",
+                "brewery": "Brouwerij De Brabandere",
+                "name": "Bavik Super Pils",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "42–49° F",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "42–49° F",
+                "Suggested Glassware": "Chalice, Goblet, or Tulip Glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Fort Lapin",
+                "name": "Bruges La Morte Tripel",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian Quadrupel",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Chalice, Goblet, Tulip, or Snifter Glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Fort Lapin",
+                "name": "Bruges La Morte Quadrupel",
+                "url": "https://www.beermonthclub.com/past-selections/2022/sept",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
