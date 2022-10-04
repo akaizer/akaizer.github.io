@@ -33770,6 +33770,187 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "oct": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Helles Lager",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "22",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Hallertau Tradition",
+                "Malts": "2-Row, Vienna, Munich, Carafoam",
+                "Country": "United States",
+                "brewery": "Southern Barrel Brewing Co.",
+                "name": "Helles Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Altbier",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Stange, Pint Glass, Mug",
+                "Hops": "German Magnum, Hallertau Mittelfrüh, Sterling",
+                "Malts": "Pilsner, Carahell, Caramunich, Special B, Carafa",
+                "Country": "United States",
+                "brewery": "Zipline Brewing Co.",
+                "name": "Copper Alt",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Ale",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "42",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Citra, El Dorado",
+                "Malts": "2-Row, Caramunich 1, Dextrin",
+                "Country": "United States",
+                "brewery": "Southern Barrel Brewing Co.",
+                "name": "Beach Bully",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Robust Porter",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "22",
+                "Serving Temperature": "48-53° F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "German Magnum, Sterling",
+                "Malts": "Pilsner, Caramunich, Special B, Chocolate, Carafa, Flaked Barley, Rolled Oats",
+                "Country": "United States",
+                "brewery": "Zipline Brewing Co.",
+                "name": "Oatmeal Porter",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Azacca, Mosaic, Simcoe, Idaho 7",
+                "Malts": "2-Row, Golden Naked Oats, White Wheat, Dextrin",
+                "Country": "United States",
+                "brewery": "Southern Barrel Brewing Co.",
+                "name": "Damn Yankee",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "55",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Mosaic, Amarillo, El Dorado",
+                "Malts": "Pilsner, Munich, Honey, Flaked Barley",
+                "Country": "United States",
+                "brewery": "Zipline Brewing Co.",
+                "name": "Mosaic IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "8.0%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Tulip",
+                "Hops": "Cashmere, Lotus",
+                "Malts": "Pilsner, Munich, Naked Oats, Flaked Wheat",
+                "Country": "United States",
+                "brewery": "Zipline Brewing Co.",
+                "name": "Dope!",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Munich Dunkel Lager",
+                "Alcohol by Volume": "5.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Country": "United States",
+                "brewery": "Hofbrauhaus Freising",
+                "name": "Dunkel",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Dortmunder",
+                "Alcohol by Volume": "5.6%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass or Flute",
+                "Country": "Germany",
+                "brewery": "Hofbrauhaus Freising",
+                "name": "Jägerbier",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Barrel-Aged Wild Stout with Cherry and Blackberry",
+                "Alcohol by Volume": "8.5%",
+                "Serving Temperature": "45–50° F",
+                "Suggested Glassware": "Tulip, Chalice, Goblet, or Teku Glass",
+                "Country": "United States",
+                "brewery": "Jolly Pumpkin Artisan Ales",
+                "name": "Who Needs an Occasion?",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian-style Quadrupel Ale w/ Spices",
+                "Alcohol by Volume": "11.3%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Chalice, Goblet, Tulip, or Snifter Glass",
+                "Country": "United States",
+                "brewery": "The Bruery",
+                "name": "Partridge in a Pear Tree (2020)",
+                "url": "https://www.beermonthclub.com/past-selections/2022/oct",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
