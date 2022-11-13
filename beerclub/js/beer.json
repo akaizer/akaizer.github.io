@@ -33951,6 +33951,188 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "nov": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Dunkel Lager",
+                "Alcohol by Volume": "5.3%",
+                "Int’l Bittering Units (IBUs)": "22",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pilsner Glass, Flute, Mug",
+                "Hops": "Hallertauer Perle",
+                "Malts": "Pilsner, Munich, Caramel, Chocolate",
+                "Country": "United States",
+                "brewery": "Backpocket Brewing Co.",
+                "name": "Slingshot",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hazy Pale Ale",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass, Tulip, IPA Glass",
+                "Hops": "Mosaic (organic",
+                "Malts": "2-Row, Carapils (all organic)",
+                "Country": "United States",
+                "brewery": "Protector Brewery",
+                "name": "Mosaic Hazy Pale Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Helles Lager",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "15",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Hallertauer Perle, Hallertauer Mittelfrüh",
+                "Malts": "Pilsner, Vienna, Carapils",
+                "Country": "United States",
+                "brewery": "Backpocket Brewing Co.",
+                "name": "Gold Coin",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Lager",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "17",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass or Flute",
+                "Hops": "Perle (organic)",
+                "Malts": "Pilsen, Carapils, 10L Munich (all organic)",
+                "Country": "United States",
+                "brewery": "Protector Brewery",
+                "name": "SD Lite Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.7%",
+                "Int’l Bittering Units (IBUs)": "58",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Amarillo, Columbus, Simcoe, Centennial",
+                "Malts": "2-Row, White Wheat, Caramunich",
+                "Country": "United States",
+                "brewery": "Backpocket Brewing Co.",
+                "name": "Raygun IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style IPA",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "50",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Magnum, Chinook, Simcoe, Centennial, Mosaic (all organic)",
+                "Malts": "Pilsen, Carapils, Rolled Oats (all organic)",
+                "Country": "United States",
+                "brewery": "Protector Brewery",
+                "name": "SD Hazy IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "West Coast-style IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Citra, Mosaic, Simcoe (all organic)",
+                "Malts": "Pilsen, Carapils (all organic)",
+                "Country": "United States",
+                "brewery": "Protector Brewery",
+                "name": "SD West Coast Style IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "European Pale Lager",
+                "Alcohol by Volume": "5.4%",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Country": "Poland",
+                "brewery": "Browar Kasztelan",
+                "name": "Kasztelan Unpasteurized",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "500-ml",
+                "Style": "Dry-Hopped Zwickelbier",
+                "Alcohol by Volume": "4.9%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Stange, Pilsner Glass, Mug",
+                "Hops": "Bitburger Siegelhopfen, Citra, Mosaic",
+                "Country": "Germany",
+                "brewery": "Bitburger Brauerei (with Deschutes Brewery)",
+                "name": "Dry Hop’d Zwickl",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Spiced Winter Warmer",
+                "Alcohol by Volume": "9%",
+                "Serving Temperature": "52–59° F",
+                "Suggested Glassware": "Tulip, Snifter, or Goblet",
+                "Country": "United States",
+                "brewery": "West Sixth Brewing",
+                "name": "Christmas Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Blended Quadrupel aged in Burgundy, Port, & other barrels",
+                "Alcohol by Volume": "11%",
+                "Serving Temperature": "52–59° F",
+                "Suggested Glassware": "Tulip, Chalice, or Goblet",
+                "Country": "Belgium",
+                "brewery": "Brouwerij De Halve Maan",
+                "name": "Straffe Hendrik Xmas Blend 2021",
+                "url": "https://www.beermonthclub.com/past-selections/2022/nov",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
