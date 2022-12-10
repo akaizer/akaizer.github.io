@@ -34133,6 +34133,189 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "dec": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Czech/Bohemian Pilsner",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Hallertau Magnum, Czech Saaz",
+                "Malts": "Pilsen, Aromatic Munich, Carapils",
+                "Country": "United States",
+                "brewery": "Jackalope Brewing Co.",
+                "name": "Sarka",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English-style Pale Ale",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "45-52º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Columbus, Cascade",
+                "Malts": "2-Row, Crystal 40L",
+                "Country": "United States",
+                "brewery": "Ipswich Ale Brewery",
+                "name": "Original Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Brown Ale w/ Maple",
+                "Alcohol by Volume": "5.1%",
+                "Int’l Bittering Units (IBUs)": "32",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Perle, Cluster, Cascade",
+                "Malts": "2-Row, Caramel 60L, Caramel 120L, Chocolate, Honey",
+                "Country": "United States",
+                "brewery": "Jackalope Brewing Co.",
+                "name": "Bear Walker",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Oatmeal Stout",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Tulip, Snifter, Pint Glass",
+                "Hops": "Columbus, Cascade",
+                "Malts": "2-Row, Crystal 60L, Chocolate, Carahell, Black, Roasted Barley, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Ipswich Ale Brewery",
+                "name": "Ipswich Oatmeal Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "37",
+                "Serving Temperature": "43-48º F",
+                "Suggested Glassware": "Pint Glass, IPA Glass",
+                "Hops": "Cascade, Chinook, Citra",
+                "Malts": "2-Row, Caramel 40L, Victory, Honey",
+                "Country": "United States",
+                "brewery": "Jackalope Brewing Co.",
+                "name": "Thunder Ann",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.2%",
+                "Int’l Bittering Units (IBUs)": "64",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip",
+                "Hops": "Columbus, Amarillo, Centennial, Simcoe",
+                "Malts": "2-Row, Caramel 20L, Bonlander Munich, Carapils",
+                "Country": "United States",
+                "brewery": "Jackalope Brewing Co.",
+                "name": "Fennario",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA (West Coast style)",
+                "Alcohol by Volume": "6.4%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Columbus, Cascade, Amarillo, Mosaic, Simcoe",
+                "Malts": "2-Row Pale, Pilsner, Honey",
+                "Country": "United States",
+                "brewery": "Ipswich Ale Brewery",
+                "name": "Route 101",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Dunkel Lager",
+                "Alcohol by Volume": "4.5%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Saaz",
+                "Country": "Czech Republic",
+                "brewery": "Pivovar Samson",
+                "name": "Praga Dark Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Czech Pilsner",
+                "Alcohol by Volume": "4.7%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Hops": "Saaz",
+                "Country": "Czech Republic",
+                "brewery": "Pivovar Samson",
+                "name": "Praga Premium Pils",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Strong Holiday Saison",
+                "Alcohol by Volume": "9.5%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Chalice, Goblet, Tulip or Pinot Glass",
+                "Country": "Belgium",
+                "brewery": "Brasserie Dupont",
+                "name": "Avec Les Bons Voeux",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian Imperial Blonde Ale",
+                "Alcohol by Volume": "10.0%",
+                "Serving Temperature": "44-48° F",
+                "Suggested Glassware": "Tulip, Chalice, Goblet, or Teku Glass",
+                "Country": "Belgium",
+                "brewery": "Het Anker",
+                "name": "Gouden Carolus Cuvee Van de Keizer Imperial Blond",
+                "url": "https://www.beermonthclub.com/past-selections/2022/dec",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
