@@ -34317,5 +34317,190 @@
                 ]
             }
         ]
+    },
+    "2023": {
+        "jan": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Golden/Blonde Ale",
+                "Alcohol by Volume": "4.7%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Idaho Grown Cascade",
+                "Malts": "Idaho Malted 2-Row, Dextrapils, Honey Malt, Red Wheat",
+                "Country": "United States",
+                "brewery": "Sawtooth Brewery",
+                "name": "Mountain Time",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "48",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Simcoe, Columbus",
+                "Malts": "2-Row, Wheat",
+                "Country": "United States",
+                "brewery": "SweetWater Brewing Co.",
+                "name": "420 Strain G13 IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Amber Ale",
+                "Alcohol by Volume": "5.6%",
+                "Int’l Bittering Units (IBUs)": "31",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Idaho Grown Cascade, Idaho Grown US Saaz",
+                "Malts": "Idaho Malted 2-Row, Caramel Malt",
+                "Country": "United States",
+                "brewery": "Sawtooth Brewery",
+                "name": "False Summit",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Mug",
+                "Hops": "Mosaic, Citra, El Dorado, Azacca, Simcoe",
+                "Malts": "2-Row, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "SweetWater Brewing Co.",
+                "name": "H.A.Z.Y. IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "65",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "CTZ Hop Oil, Idaho Grown Idaho 7, Idaho Grown Cascade, Idaho Grown Chinook, Mosaic Cryo, Citra Cryo",
+                "Malts": "Idaho Malted 2-Row, Dextrapils, Vienna Malt, Caramel Malt",
+                "Country": "United States",
+                "brewery": "Sawtooth Brewery",
+                "name": "Idahome",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "8%",
+                "Int’l Bittering Units (IBUs)": "53",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "IPA Glass or Tall Tulip",
+                "Hops": "Chinook Hop Oil, Idaho Grown Cascade, Idaho Grown Centennial, Idaho Grown Idaho 7, Citra Cryo, Mosaic Cryo",
+                "Malts": "Idaho Malted 2-Row, Flaked Wheat, Dextrapils, Vienna Malt, Dextrose",
+                "Country": "United States",
+                "brewery": "Sawtooth Brewery",
+                "name": "Tandem",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy Double IPA",
+                "Alcohol by Volume": "8.5%",
+                "Int’l Bittering Units (IBUs)": "47",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "IPA Glass or Tall Tulip",
+                "Hops": "Strata, El Dorado, Sultana",
+                "Malts": "2 Row, Pilsner, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "SweetWater Brewing Co.",
+                "name": "H.A.Z.Y. Double IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Session IPA",
+                "Alcohol by Volume": "4.7%",
+                "Int’l Bittering Units (IBUs)": "41",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "IPA Glass, Flute, Pint Glass",
+                "Hops": "Citra, El Dorado, Mosaic",
+                "Malts": "Pale Ale, Victory, Carapils, Malted Oats",
+                "Country": "Mexico",
+                "brewery": "Cerveceria de Colima",
+                "name": "Piedra Lisa",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Belgian Pale Ale",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "18",
+                "Suggested Glassware": "Tulip, Snifter, Goblet",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Palm",
+                "name": "Palm Spéciale Belge",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Farmhouse Ale Brewed with Belgian Candi Sugar, Coriander, Black Peppercorns, and Truffle Honey",
+                "Alcohol by Volume": "8.8%",
+                "Serving Temperature": "55–61° F",
+                "Suggested Glassware": "Snifter, Tulip, Chalice, or Pinot Glass",
+                "brewery": "Jester King Brewery",
+                "name": "Fantôme Del Rey",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Blend of Fresh and Heaven Hill Boubon Barrel-Aged Imperial Stouts",
+                "Alcohol by Volume": "11.5%",
+                "Serving Temperature": "40–45° F",
+                "Suggested Glassware": "Snifter, Chalice, Tulip, or Teku",
+                "Country": "United States",
+                "brewery": "The Lost Abbey",
+                "name": "Faith and Obedience",
+                "url": "https://www.beermonthclub.com/past-selections/2023/jan",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ]
     }
 }
