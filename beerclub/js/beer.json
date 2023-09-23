@@ -35399,6 +35399,549 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "july": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Blonde Ale",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "28",
+                "Serving Temperature": "43-48º F",
+                "Suggested Glassware": "Pint Glass or Pilsner Glass",
+                "Hops": "Herkules, Tettnanger, Hallertau Mittelfrüh",
+                "Malts": "2-Row Pale, Caramel 10, White Wheat",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "Lonely Blonde",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Altbier",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Stange, Pilsner Glass, Pint Glass",
+                "Hops": "Northern Brewer, Willamette",
+                "Malts": "Pale, Wheat, Caramel, Chocolate",
+                "Country": "United States",
+                "brewery": "Long Trail Brewing Co.",
+                "name": "Long Trail Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Lager",
+                "Alcohol by Volume": "4.0%",
+                "Int’l Bittering Units (IBUs)": "12",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass or Flute",
+                "Hops": "Cascade",
+                "Malts": "2-Row Pale",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "Chill City",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Sticke Alt",
+                "Alcohol by Volume": "7.2%",
+                "Int’l Bittering Units (IBUs)": "39",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Stange, Tulip",
+                "Hops": "Northern Brewer, Willamette",
+                "Malts": "Pale, Dark Caramel, Wheat, Chocolate",
+                "Country": "United States",
+                "brewery": "Long Trail Brewing Co.",
+                "name": "Double Bag",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA (West Coast style)",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "74",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Mosaic, Columbus, Bravo, Simcoe, Ekuanot",
+                "Malts": "2-Row, Crystal 15, Carawheat",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "300 IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.4%",
+                "Int’l Bittering Units (IBUs)": "69",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Columbus, Simcoe, Glacier",
+                "Malts": "2-Row Pale, Caramel 60, White Wheat",
+                "Country": "United States",
+                "brewery": "Fulton Beer",
+                "name": "Sweet Child of Vine",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England Hazy IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Citra, Amarillo, Ekuanot, Simcoe, Cascade",
+                "Malts": "Pale, Aromatic Munich, Carapils, Oats",
+                "Country": "United States",
+                "brewery": "Long Trail Brewing Co.",
+                "name": "VT IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "16-oz",
+                "Style": "Franconian Rotbier",
+                "Alcohol by Volume": "5.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Willi Becher, Stange",
+                "Country": "Germany",
+                "brewery": "Tucher Bräu",
+                "name": "Rotbier",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "16-oz",
+                "Style": "Helles Lager",
+                "Alcohol by Volume": "5.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pilsner Glass, Willi Becher, Flute",
+                "Country": "Germany",
+                "brewery": "Tucher Bräu",
+                "name": "Helles Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Porter – Bière Noire des Flandres",
+                "Alcohol by Volume": "6.5%",
+                "Serving Temperature": "45–52° F",
+                "Suggested Glassware": "Tulip, Snifter, Goblet",
+                "Country": "France",
+                "brewery": "Brasserie Thiriez",
+                "name": "La Maline (Rare Beer Club Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Strong Scotch Ale aged in Chardonnay Barrels",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "45–52° F",
+                "Suggested Glassware": "Tulip, Goblet, Thistle, or Chardonnay Glass",
+                "Country": "Belgium",
+                "brewery": "Brasserie De Silly",
+                "name": "Chardonnay Barrel Aged Scotch Silly (Rare Beer Club Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2023/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ],
+        "aug": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pilsner",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "28",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Tall Flute",
+                "Hops": "Ariana, Callista",
+                "Malts": "Pilsner, Vienna, Corn",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Daddy-O Pilsner",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hefeweizen",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "28",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Weizen Glass, Pilsner Glass",
+                "Hops": "Magnum, Tettnang",
+                "Malts": "Weyermann Wheat, 2-Row, Melanoidin, Rice Hulls",
+                "Country": "United States",
+                "brewery": "Tivoli Brewing Co.",
+                "name": "Mile Hi Hefe",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Belgian-style Blonde Ale",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "23",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Tulip, Flute",
+                "Hops": "Hallertau Mittelfrüh, Saaz",
+                "Malts": "Pilsner, Belgian Candi Syrup",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Little Tables",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Tall Flute",
+                "Hops": "Magnum, Saaz",
+                "Malts": "Pilsner, Rye Pale, Acidulated",
+                "Country": "United States",
+                "brewery": "Tivoli Brewing Co.",
+                "name": "Bo Girl Pilsner",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "58",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Citra, Mosaic",
+                "Malts": "Pale, Flaked Wheat, Malted Oats",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Hop Perfect IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "5.4%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Strata, Sabro",
+                "Malts": "Pilsner, Malted Oats, Flaked Wheat, Vienna",
+                "Country": "United States",
+                "brewery": "Yazoo Brewing Co.",
+                "name": "Calla IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "35",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Chinook, Amarillo, Mosaic",
+                "Malts": "Pilsner, Caramel 60, Flaked Oats, Flaked Wheat",
+                "Country": "United States",
+                "brewery": "Tivoli Brewing Co.",
+                "name": "Mountain Squeeze",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Saison",
+                "Alcohol by Volume": "5.5%",
+                "Serving Temperature": "47-52° F",
+                "Suggested Glassware": "Tulip, Flute, Goblet, Willi Becher",
+                "Country": "Belgium",
+                "brewery": "Verbeeck-Back-De Cock Brewery",
+                "name": "Kerel Saison",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Flanders Red Ale",
+                "Alcohol by Volume": "6.6%",
+                "Serving Temperature": "42-55° F",
+                "Suggested Glassware": "Tulip, Snifter, Goblet",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Omer Vander Ghinste",
+                "name": "Cuvée des Jacobins Prestige",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Foudre-Aged Wild Ale",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "46–53° F",
+                "Suggested Glassware": "Tulip, Goblet or Nonic Glass",
+                "Country": "United States",
+                "brewery": "Funkwerks",
+                "name": "Wild #3",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Wheatwine brewed with Artisanal Red Wheat",
+                "Alcohol by Volume": "8%",
+                "Serving Temperature": "38–45° F",
+                "Suggested Glassware": "Tulip, Teku, or Nonic",
+                "Country": "United States",
+                "brewery": "Broken Bow Brewery",
+                "name": "Wheatwine Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2023/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ],
+        "sept": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Northern German-style Pilsner",
+                "Alcohol by Volume": "4.9%",
+                "Int’l Bittering Units (IBUs)": "44",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Tall Flute",
+                "Hops": "Tettnang, Hallertau, Saaz",
+                "Malts": "Pilsner",
+                "Country": "United States",
+                "brewery": "Sly Fox Brewing Co.",
+                "name": "Pikeland Pils",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Amber/Red Ale",
+                "Alcohol by Volume": "7.1%",
+                "Int’l Bittering Units (IBUs)": "10",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Nugget",
+                "Malts": "Pilsen, Honey, Caramel, Flaked Maize, Munich",
+                "Country": "United States",
+                "brewery": "High Hops Brewery",
+                "name": "The Honeyed One",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Munich-style Helles Lager",
+                "Alcohol by Volume": "4.9%",
+                "Int’l Bittering Units (IBUs)": "18",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Tall Flute",
+                "Hops": "Hallertau, Saaz",
+                "Malts": "Pilsner",
+                "Country": "United States",
+                "brewery": "Sly Fox Brewing Co.",
+                "name": "Helles Golden Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Spiced Golden Ale",
+                "Alcohol by Volume": "6.3%",
+                "Int’l Bittering Units (IBUs)": "12",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Cascade",
+                "Malts": "Pilsen, Wheat, Flaked Maize",
+                "Country": "United States",
+                "brewery": "High Hops Brewery",
+                "name": "The Golden One",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "34",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass or Pint Glass",
+                "Hops": "Azacca, El Dorado, Trident, Bravo",
+                "Malts": "Pilsner, Munich, Wheat, Oats",
+                "Country": "United States",
+                "brewery": "Sly Fox Brewing Co.",
+                "name": "Haze Fix IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.0%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Mosaic, Citra, Cascade, Centennial",
+                "Malts": "Pale, Crystal",
+                "Country": "United States",
+                "brewery": "Sly Fox Brewing Co.",
+                "name": "Vulpulin IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "8.36%",
+                "Int’l Bittering Units (IBUs)": "96",
+                "Serving Temperature": "47-52º F",
+                "Suggested Glassware": "Glass, Tulip, Snifter",
+                "Hops": "Centennial, Cascade, Citra",
+                "Malts": "Maris Otter, 2-Row, Pilsen, Caramel, Carapils",
+                "Country": "United States",
+                "brewery": "High Hops Brewery",
+                "name": "Dr. Pat’s Double IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Bock",
+                "Alcohol by Volume": "7.0%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Tulip, Willi Becher, Mug",
+                "Country": "Italy",
+                "brewery": "Birrificio Angelo Poretti",
+                "name": "6 Luppoli Bock Rossa",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Pale Lager",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "42-47° F",
+                "Suggested Glassware": "Willi Becher, Pint Glass, Tulip",
+                "Country": "Italy",
+                "brewery": "Birrificio Angelo Poretti",
+                "name": "4 Luppoli Premium Lager",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "International Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian Dark Farmhouse Ale w/ Spices",
+                "Alcohol by Volume": "7.5%",
+                "Serving Temperature": "Serving Temperature 45–52° F",
+                "Suggested Glassware": "Tulip, Teku, or Goblet",
+                "Country": "Belgium",
+                "brewery": "Brasserie Fantôme",
+                "name": "Rare Barley Dark Project (Rare Beer Club Exclusive)",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Wild Saison",
+                "Alcohol by Volume": "6%",
+                "Serving Temperature": "46–53° F",
+                "Suggested Glassware": "Tulip, Goblet, Chardonnay Glass",
+                "Country": "United States",
+                "brewery": "Libertine Brewing Co.",
+                "name": "Central Coast Saison (2016)",
+                "url": "https://www.beermonthclub.com/past-selections/2023/sept",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
