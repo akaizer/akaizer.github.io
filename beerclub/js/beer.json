@@ -39320,6 +39320,701 @@
                     "Rare Beer Club"
                 ]
             }
+        ],
+        "may": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Dry-hopped American Pilsner",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Hallertau Blanc, Mosaic",
+                "Malts": "Rahr Pilsner, Weyermann Acidulated, Louisiana Cajun Rice",
+                "Country": "United States",
+                "brewery": "Great Raft Brewing",
+                "name": "Southern Drawl",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club",
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pilsner",
+                "Alcohol by Volume": "4.7%",
+                "Int’l Bittering Units (IBUs)": "15",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Citra",
+                "Malts": "Pale Malt, Wheat Malt",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "Happy Hour",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Golden Ale w/ orange peel & honey",
+                "Alcohol by Volume": "4.0%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "Pint Glass, Flute",
+                "Hops": "Cascade",
+                "Malts": "Rahr Pilsner, Weyermann Vienna",
+                "Country": "Netherlands",
+                "brewery": "Great Raft Brewing",
+                "name": "318 Golden Ale",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.1%",
+                "Int’l Bittering Units (IBUs)": "62",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "Amarillo, Simcoe, Nugget",
+                "Malts": "Pale Malt, Crystal 60",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "Peak IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Hazy Session IPA",
+                "Alcohol by Volume": "4.1%",
+                "Int’l Bittering Units (IBUs)": "33",
+                "Serving Temperature": "42-47º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Calypso, Citra, Simcoe",
+                "Malts": "Pale Malt",
+                "Country": "United States",
+                "brewery": "Peak Organic Brewing Co.",
+                "name": "Slim Hazy",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "440-ml",
+                "Style": "English Pale Ale (Nitrogenated)",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pint Glass, Wide Flute",
+                "Hops": "Pilgrim, First Gold, Goldings",
+                "Malts": "Pale, Crystal",
+                "Country": "England",
+                "brewery": "Morland Brewing",
+                "name": "Old Speckled Hen",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "375-ml",
+                "Style": "Black Lager",
+                "Alcohol by Volume": "4.6%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pint Glass, Tulip, Oversized Wine Glass",
+                "Country": "Brazil",
+                "brewery": "Cervejas Premium Do Brasil",
+                "name": "Xingu Black Beer",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Baltic Porter",
+                "Alcohol by Volume": "10%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Tulip, Globe Snifter, or Teku Glass",
+                "Country": "Canada",
+                "brewery": "Microbrasserie Les Trois Mousquetaires",
+                "name": "Grande Cuvée Porter Baltique",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "16-oz",
+                "Style": "English Style Barleywine",
+                "Alcohol by Volume": "13%",
+                "Serving Temperature": "48–52° F",
+                "Suggested Glassware": "Globe Snifter or Tulip",
+                "Country": "United States",
+                "brewery": "Bombastic Brewing",
+                "name": "Stubbornness (2025 Release)",
+                "url": "https://www.beermonthclub.com/past-selections/2025/may",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ],
+        "june": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Kölsch",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "15",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Stange, Pilsner Glass",
+                "Hops": "Tettnanger",
+                "Malts": "2-Row Pale, White Wheat, Light Munich",
+                "Country": "United States",
+                "brewery": "Port Orleans Brewing Co.",
+                "name": "Kennerbräu Kolsch",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Imperial Pilsner",
+                "Alcohol by Volume": "7.5%7.5%",
+                "Int’l Bittering Units (IBUs)": "36",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "Pilsner Glass, Tall Chalice",
+                "Hops": "Southern Cross, Hallertau Mittelfrüh",
+                "Malts": "2-Row, Pilsner",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Top Gear",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Mexican-style Lager",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "14",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass, Pint Glass",
+                "Hops": "Sterling, Amarillo",
+                "Malts": "2-Row Pale, Vienna, Flaked Corn",
+                "Country": "United States",
+                "brewery": "Port Orleans Brewing Co.",
+                "name": "Dorada",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Chocolate Milk Stout",
+                "Alcohol by Volume": "7.5%",
+                "Int’l Bittering Units (IBUs)": "30",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Tulip or Pint Glass",
+                "Hops": "Zeus, Chinook",
+                "Malts": "2-Row, C-40, Roasted Barley, C-150, Chocolate Malt, Rolled Oats",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Lowrider",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "India Pale Lager",
+                "Alcohol by Volume": "4.5%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "43-48º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Hallertauer Taurus, Galaxy, Motueka",
+                "Malts": "2-Row Pale, White Wheat",
+                "Country": "United States",
+                "brewery": "Port Orleans Brewing Co.",
+                "name": "River Hop",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Double IPA",
+                "Alcohol by Volume": "9.0%",
+                "Int’l Bittering Units (IBUs)": "65",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Snifter",
+                "Hops": "Zeus, Cascade, Centennial, Chinook, Comet",
+                "Malts": "2-Row, Munich, Wheat, C-40",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Slipstream",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Session IPA (West Coast-style)",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "42",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass",
+                "Hops": "Cascade, Centennial, El Dorado, Citra, Amarillo",
+                "Malts": "2-Row, Munich, C-40, Wheat, Rolled Oats",
+                "Country": "United States",
+                "brewery": "Salt Flats Brewing Co.",
+                "name": "Life Elevated",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "5.0%",
+                "Serving Temperature": "43-48° F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Hallertau",
+                "Country": "Turkey",
+                "brewery": "Anadolu Efes Brewery",
+                "name": "Efes Pilsener",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Kölsch",
+                "Alcohol by Volume": "4.8%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "40-45° F",
+                "Suggested Glassware": "Stange, Pilsner Glass",
+                "Hops": "Hallertauer Perle, Hallertauer Magnum",
+                "Country": "Germany",
+                "brewery": "Privatbrauerei Gaffel Becker & Co.",
+                "name": "Gaffel Kölsch",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Belgian Tripel blended w/ 2-yr Aged Flemish Red-Brown Ale",
+                "Alcohol by Volume": "8.2%",
+                "Serving Temperature": "50–57° F",
+                "Suggested Glassware": "Tulip, Teku, Chalice, Pinot Glass",
+                "Country": "Belgium",
+                "brewery": "Brouwerij Rodenbach",
+                "name": "Rodenbach Red Tripel",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "16-oz",
+                "Style": "Imperial Breakfast Stout",
+                "Alcohol by Volume": "9%",
+                "Serving Temperature": "50–55° F",
+                "Suggested Glassware": "Tulip, Snifter, Teku",
+                "Country": "United States",
+                "brewery": "Invertase Brewing Co.",
+                "name": "1726",
+                "url": "https://www.beermonthclub.com/past-selections/2025/june",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ],
+        "july": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "German-style Pilsner",
+                "Alcohol by Volume": "5.3%",
+                "Int’l Bittering Units (IBUs)": "50",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Tettnang",
+                "Malts": "Rahr Premium Pils",
+                "Country": "United States",
+                "brewery": "Real Ale Brewing Co.",
+                "name": "Hans’ Pils",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "English Brown Ale",
+                "Alcohol by Volume": "6.5%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Pint Glass or Mug",
+                "Hops": "Target",
+                "Malts": "Pale, Crystal, Chocolate, Toasted Oats",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "Ringneck",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Ale",
+                "Alcohol by Volume": "5.2%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "43-48º F",
+                "Suggested Glassware": "Pint Glass or IPA Glass",
+                "Hops": "Idaho 7, Citra, Mosaic Cryo (dry hop)",
+                "Malts": "American 2-Row",
+                "Country": "United States",
+                "brewery": "Real Ale Brewing Co.",
+                "name": "Swifty",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Scotch Ale / Wee Heavy",
+                "Alcohol by Volume": "7.8%",
+                "Int’l Bittering Units (IBUs)": "20",
+                "Serving Temperature": "48-55º F",
+                "Suggested Glassware": "Snifter, Tulip, Thistle Glass",
+                "Hops": "Target",
+                "Malts": "Golden Promise, Peat Smoked, Crystal, Munich, Cherry Wood Smoked",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "Bancreagie",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "7.1%",
+                "Int’l Bittering Units (IBUs)": "60",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Tulip, Pint Glass",
+                "Hops": "undisclosed",
+                "Malts": "Rahr Premium Pils, Simpsons Caramalt",
+                "Country": "United States",
+                "brewery": "Real Ale Brewing Co.",
+                "name": "Axis",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England-style Hazy IPA",
+                "Alcohol by Volume": "6.6%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Mug",
+                "Hops": "Columbus, Amarillo, Cascade, Comet, Azacca, Mosaic, Strata",
+                "Malts": "2-Row, Caramalt, Carafoam, White Wheat",
+                "Country": "United States",
+                "brewery": "Real Ale Brewing Co.",
+                "name": "Fresh Kicks",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American IPA",
+                "Alcohol by Volume": "6.8%",
+                "Int’l Bittering Units (IBUs)": "70",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, or Mug",
+                "Hops": "Centennial, El Dorado, Cascade",
+                "Malts": "Vienna, Pale, Carafoam, Caramalt, Acidulated",
+                "Country": "United States",
+                "brewery": "Brau Brothers Brewing Co.",
+                "name": "3 Trees IPA",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Helles Lager",
+                "Alcohol by Volume": "5.3%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Pilsner Glass, Flute",
+                "Country": "Germany",
+                "brewery": "Arcobräu Gräfliches Brauhaus",
+                "name": "Mooser Liesl Helles",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "330-ml",
+                "Style": "Doppelbock",
+                "Alcohol by Volume": "7.2%",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "Tulip, Snifter",
+                "Country": "Germany",
+                "brewery": "Arcobräu Gräfliches Brauhaus",
+                "name": "Coronator",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Wine Hybrid Wild Ale w/ Grenache Grapes",
+                "Alcohol by Volume": "11.0%",
+                "Int’l Bittering Units (IBUs)": "12",
+                "Serving Temperature": "50-55° F",
+                "Suggested Glassware": "Teku, Tulip, Flute, Wine Glass",
+                "Hops": "Aged Lambic Blend",
+                "Malts": "2-Row, Wheat Malt",
+                "Country": "United States",
+                "brewery": "Pryes Brewing Co.",
+                "name": "Idyll Forest – Onirique 2025",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "16-oz",
+                "Style": "Quadruple Hazy IPA",
+                "Alcohol by Volume": "10.4%",
+                "Int’l Bittering Units (IBUs)": "45",
+                "Serving Temperature": "45-50° F",
+                "Suggested Glassware": "IPA Glass, Tulip, Snifter, Teku",
+                "Hops": "Citra, Hallertau Blanc, Mosaic, Simcoe, Sabro",
+                "Malts": "Malted Oats, Unmalted Wheat, War Horse 2-Row",
+                "Country": "United States",
+                "brewery": "War Horse Brewing Co.",
+                "name": "It Came From Seneca Lake",
+                "url": "https://www.beermonthclub.com/past-selections/2025/july",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
+        ],
+        "aug": [
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Irish Red Ale",
+                "Alcohol by Volume": "7.0%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "43-48° F",
+                "Suggested Glassware": "Tulip, Pint Glass",
+                "Hops": "Magnum, Tettnang",
+                "Malts": "Honey Malt, Pils, Caramel",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "Shenanigans",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "German Pilsner",
+                "Alcohol by Volume": "5.0%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Pilsner Glass",
+                "Hops": "Magnum",
+                "Malts": "Pilsner",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "Oom Pah Pah",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "Oatmeal Coffee Stout",
+                "Alcohol by Volume": "6.4%",
+                "Int’l Bittering Units (IBUs)": "31",
+                "Serving Temperature": "50-55º F",
+                "Suggested Glassware": "Pint Glass, Mug, Tulip",
+                "Hops": "Warrior, Centennial",
+                "Malts": "Pale Malt, Flaked Oats, Chocolate Malt, White Wheat, Roasted Wheat, Roasted Barley",
+                "brewery": "Bent River Brewing Co.",
+                "name": "Uncommon Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club",
+                    "U.S. & International Variety Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "American Pale Wheat Ale",
+                "Alcohol by Volume": "5.5%",
+                "Int’l Bittering Units (IBUs)": "32",
+                "Serving Temperature": "40-45º F",
+                "Suggested Glassware": "Flute, Weizen Glass",
+                "Hops": "Amarillo",
+                "Malts": "Pale, White Wheat, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Bent River Brewing Co.",
+                "name": "Milltown Wheat",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "U.S. Microbrewed Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England Hazy IPA",
+                "Alcohol by Volume": "7.5%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Tulip",
+                "Hops": "Citra, Mosaic, Simcoe",
+                "Malts": "Pale, White Wheat, Flaked Oats",
+                "Country": "United States",
+                "brewery": "Bent River Brewing Co.",
+                "name": "QC Haze",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "12-oz",
+                "Style": "New England Hazy IPA",
+                "Alcohol by Volume": "6.2%",
+                "Int’l Bittering Units (IBUs)": "24",
+                "Serving Temperature": "45-50º F",
+                "Suggested Glassware": "IPA Glass, Pint Glass, Tulip",
+                "Hops": "Idaho 7, Cashmere",
+                "Malts": "Pils, Oats, Wheat",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "Widow Maker",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "Hop Heads Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "440-ml",
+                "Style": "Irish Red Ale (Nitrogenated)",
+                "Alcohol by Volume": "4.3%",
+                "Int’l Bittering Units (IBUs)": "25",
+                "Serving Temperature": "43-48° F",
+                "Suggested Glassware": "Tulip, Pint Glass",
+                "Hops": "Mt. Hood",
+                "Country": "Ireland",
+                "brewery": "Carlow Brewing Co.",
+                "name": "O'Hara's Irish Red",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "440-ml",
+                "Style": "Irish Dry Stout (Nitrogenated)",
+                "Alcohol by Volume": "4.3%",
+                "Int’l Bittering Units (IBUs)": "40",
+                "Serving Temperature": "45-55° F",
+                "Suggested Glassware": "Tulip, Pint Glass",
+                "Hops": "Fuggle",
+                "Country": "Ireland",
+                "brewery": "Carlow Brewing Co.",
+                "name": "O’Hara’s Irish Stout",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "U.S. & International Variety Beer Club",
+                    "International Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "750-ml",
+                "Style": "Bourbon-Barrel-Aged Imperial Red Ale",
+                "Alcohol by Volume": "9%",
+                "Int’l Bittering Units (IBUs)": "19",
+                "Serving Temperature": "48-55° F",
+                "Suggested Glassware": "Tulip, Small Nonic, Snifter, or Goblet",
+                "Hops": "Simcoe, Fuggle",
+                "Malts": "Spec Pale, Caramel 60, Goldpils Vienna, Wheat, Light Crystal, Chocolate, Cara Red",
+                "Country": "United States",
+                "brewery": "South Street Brewery",
+                "name": "Imperial Satan’s Pony",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            },
+            {
+                "Bottle Size": "16-oz",
+                "Style": "Bourbon-Barrel-Aged Imperial Porter",
+                "Alcohol by Volume": "8.5%",
+                "Int’l Bittering Units (IBUs)": "32",
+                "Serving Temperature": "48-55° F",
+                "Suggested Glassware": "Tulip, Small Nonic, Snifter, or Goblet",
+                "Hops": "Magnum, Saaz",
+                "Malts": "Pils, Caramel, Chocolate",
+                "Country": "United States",
+                "brewery": "Millstream Brewing Co.",
+                "name": "40th Anniversary Bourbon Barrel Aged Porter",
+                "url": "https://www.beermonthclub.com/past-selections/2025/aug",
+                "clubs": [
+                    "Rare Beer Club"
+                ]
+            }
         ]
     }
 }
