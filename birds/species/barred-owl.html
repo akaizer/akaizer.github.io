@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Barred Owl · Bird Photo Catalog</title>
+<style>
+:root { --bg:#0b0e11; --card:#11151a; --muted:#a9b1bb; --text:#e9eef4; --link:#7cc4ff; --border:#1f252d; }
+*{box-sizing:border-box}
+body{margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text)}
+a{color:var(--link); text-decoration:none} a:hover{text-decoration:underline}
+.container{max-width:1200px; margin:0 auto; padding:24px}
+.header{display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:16px}
+.h1{font-size:28px; font-weight:700} .sub{color:var(--muted)}
+.card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px}
+.table{width:100%; border-collapse:separate; border-spacing:0}
+.table th,.table td{padding:10px 12px; border-bottom:1px solid var(--border)}
+.table thead th{position:sticky; top:0; background:var(--card); z-index:1; text-align:left}
+.search{width:100%; border:1px solid var(--border); background:#0e1319; color:var(--text); border-radius:10px; padding:10px 12px}
+.kbd{background:#1b212a; border:1px solid var(--border); padding:2px 6px; border-radius:6px; font-size:12px; color:var(--muted)}
+.grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:12px}
+.thumb{display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; border:1px solid var(--border); background:#0e1319}
+.meta{font-size:12px; color:var(--muted); margin-top:6px}
+.small{font-size:12px; color:var(--muted)} .badge{font-variant-numeric:tabular-nums}
+.tag{display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid var(--border); color:var(--muted); margin:2px 4px 0 0}
+footer{margin-top:36px; color:var(--muted); font-size:12px}
+.sortable th{cursor:pointer}
+.table-wrap{
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch; /* momentum scrolling on iOS */
+}
+.table{ min-width: 700px; } /* prevents columns from squishing too hard */
+.table thead, .table thead tr, .table thead th{ overflow: visible; }
+.table th { text-wrap: nowrap; }
+
+/* Uniform, letterboxed grid */
+.grid.uniform { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:12px }
+.grid.uniform .thumbbox{
+  position:relative; width:100%; aspect-ratio:4/3;
+  background:#0e1319; border:1px solid var(--border); border-radius:12px;
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.grid.uniform .thumbbox img.thumb{ width:100%; height:100%; object-fit:contain }
+
+.stars{
+  font-size:14px;
+  letter-spacing:1px;
+  color:#ffcc33;         /* gold */
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+.stars::selection{ background:transparent; } /* cleaner highlighting */
+
+/* Lightbox modal */
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.85); z-index:1000}
+.modal.open{display:flex}
+.modal img{max-width:95vw; max-height:90vh; border-radius:12px; border:1px solid var(--border); background:#000}
+.modal .caption{position:absolute; left:0; right:0; bottom:12px; text-align:center; color:#e6e6e6; font-size:12px; padding:0 16px}
+.modal .nav{position:absolute; top:50%; transform:translateY(-50%); font-size:42px; line-height:42px; padding:12px; cursor:pointer; user-select:none; color:#e6e6e6}
+.modal .prev{left:12px}
+.modal .next{right:12px}
+.modal .close{position:absolute; top:12px; right:16px; font-size:28px; line-height:28px; cursor:pointer; user-select:none; color:#e6e6e6}
+.modal .caption{ white-space:normal; word-break:break-word; }
+.modal .caption a{ text-decoration:underline; }
+@media (max-width: 640px){
+  .modal .caption{
+    position:absolute; bottom:0; left:0; right:0;
+    background:rgba(0,0,0,0.55);
+    padding:6px 12px; font-size:12px;
+    white-space:normal;
+  }
+}
+@media (min-width: 641px){
+  .modal{
+    /* stack image + caption vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal img{
+    max-height: 80vh;   /* leave room for caption */
+    display: block;
+  }
+  .modal .caption{
+    position: static;   /* below the image */
+    margin-top: 12px;
+    max-width: 95vw;
+    text-align: center;
+    font-size: 13px;
+    color: #e6e6e6;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+/* Spotlight */
+.spotlight{ display:block; width:240px; }
+.spot-card{ display:block; text-decoration:none; }
+.spot-img{
+  display:block; width:100%; height:auto;
+  border-radius:12px; border:1px solid var(--border); background:#0e1319;
+  aspect-ratio:4/3; object-fit:contain;
+}
+.spot-meta{
+  display:flex; gap:8px; align-items:center; margin-top:8px; color:var(--text); justify-content: center;
+  font-size:13px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div>
+    <div class="h1">Barred Owl</div>
+    <div class="sub"><i>Strix varia</i> · Lifer #343</div>
+  </div>
+  <div><a class="tag" href="../index.html">← Back</a></div>
+</div>
+
+<div class="card" style="margin-bottom:16px">
+  <div style="display:flex; gap:6px; flex-wrap:wrap">
+    <span class="tag">Photos: 1</span>
+    <span class="tag">Forms: 1</span>
+  </div>
+  
+  <div style='margin-top:10px; display:flex; gap:6px; flex-wrap:wrap'><span class='tag'>US-IA</span></div>
+</div>
+
+<div class='card' role='region' aria-label='Background' style='margin-bottom:16px'><div class='small' style='white-space:pre-wrap'>0ISSF.
+Plumage consistent.
+M/F similar.</div></div>
+
+<div class="card">
+  <div class="grid uniform">
+    
+<div class="lightbox-item" data-full="../assets/photos/2024-09-14_1726315432_46_0.webp" data-alt="Barred Owl" data-tech="&lt;span class=&quot;stars&quot; title=&quot;Q:L&quot;&gt;★★☆☆☆&lt;/span&gt; · 2024-09-14 · US-IA · 1786×1191 (237×352) · ISO 65535 · Canon EOS R8" data-meta="Perched" data-context="">
+  <div class="thumbbox">
+    <img class="thumb" src="../assets/photos/2024-09-14_1726315432_46_0-thumb.webp" alt="Barred Owl" loading="lazy"/>
+  </div>
+  <div class="meta" style="padding: 0px 5px">
+    <span class="stars" title="Q:L">★★☆☆☆</span> · 2024-09-14 · US-IA · 1786×1191 (237×352) · ISO 65535 · Canon EOS R8<br />
+    Perched
+  </div>
+</div>
+
+  </div>
+</div>
+
+<div id="lightbox" class="modal" aria-hidden="true">
+  <div class="nav prev" aria-label="Previous" role="button" tabindex="0">‹</div>
+  <img src="" alt=""/>
+  <div class="nav next" aria-label="Next" role="button" tabindex="0">›</div>
+  <div class="close" aria-label="Close" role="button" tabindex="0">✕</div>
+  <div class="caption small"></div>
+</div>
+
+</div>
+<script>
+function tableFilter(inputId, tableId){
+  const q = document.getElementById(inputId).value.trim().toLowerCase();
+  const rows = document.querySelectorAll(`#${tableId} tbody tr`);
+  for (const tr of rows) {
+    const text = tr.innerText.toLowerCase();
+    tr.style.display = text.indexOf(q) >= 0 ? "" : "none";
+  }
+}
+// very small click-to-sort
+function makeSortable(tableId){
+  const table = document.getElementById(tableId);
+  if(!table) return;
+  table.querySelectorAll('th').forEach((th, idx) => {
+    th.addEventListener('click', () => {
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const asc = th.dataset.sortAsc === "true" ? false : true;
+      rows.sort((a,b)=>{
+        const ta = a.children[idx].innerText.trim();
+        const tb = b.children[idx].innerText.trim();
+        const na = parseFloat(ta.replace(/[^0-9.-]/g,'')); const nb = parseFloat(tb.replace(/[^0-9.-]/g,''));
+        const aNum = !isNaN(na) && ta.match(/^[0-9 .%-]+$/); const bNum = !isNaN(nb) && tb.match(/^[0-9 .%-]+$/);
+        if (aNum && bNum) return asc ? (na-nb) : (nb-na);
+        return asc ? ta.localeCompare(tb) : tb.localeCompare(ta);
+      });
+      tbody.innerHTML = ""; rows.forEach(r=>tbody.appendChild(r));
+      table.querySelectorAll('th').forEach(h=>h.dataset.sortAsc="");
+      th.dataset.sortAsc = asc ? "true" : "false";
+    });
+  });
+}
+
+function setupLightbox(){
+  const items = Array.from(document.querySelectorAll('.lightbox-item'));
+  if (!items.length) return;
+  const modal = document.getElementById('lightbox');
+  const img = modal.querySelector('img');
+  const cap = modal.querySelector('.caption');
+  const btnPrev = modal.querySelector('.prev');
+  const btnNext = modal.querySelector('.next');
+  const btnClose = modal.querySelector('.close');
+  let idx = -1;
+
+  function openAt(i){
+    idx = i;
+    const el = items[idx];
+    img.src = el.dataset.full || "";
+    img.alt = el.dataset.alt || "";
+    cap.innerHTML = el.dataset.tech + "<br />" + el.dataset.meta || "";
+    if (el.dataset.context) {
+        cap.innerHTML += "<br />" + el.dataset.context;
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    img.src = "";
+  }
+  function next(){ openAt((idx + 1) % items.length); }
+  function prev(){ openAt((idx - 1 + items.length) % items.length); }
+
+  items.forEach((el,i)=>{
+    el.addEventListener('click', (e)=>{ e.preventDefault(); openAt(i); });
+  });
+  modal.addEventListener('click', (e)=>{ if(e.target === modal) close(); });
+  btnClose.addEventListener('click', close);
+  btnNext.addEventListener('click', next);
+  btnPrev.addEventListener('click', prev);
+  document.addEventListener('keydown', (e)=>{
+    if(!modal.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowRight') next();
+    if(e.key === 'ArrowLeft') prev();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  makeSortable('speciesTable'); setupLightbox();
+});
+</script>
+</body>
+</html>

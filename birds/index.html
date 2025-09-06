@@ -1,0 +1,3610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bird Photo Catalog</title>
+<style>
+:root { --bg:#0b0e11; --card:#11151a; --muted:#a9b1bb; --text:#e9eef4; --link:#7cc4ff; --border:#1f252d; }
+*{box-sizing:border-box}
+body{margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text)}
+a{color:var(--link); text-decoration:none} a:hover{text-decoration:underline}
+.container{max-width:1200px; margin:0 auto; padding:24px}
+.header{display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:16px}
+.h1{font-size:28px; font-weight:700} .sub{color:var(--muted)}
+.card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:16px}
+.table{width:100%; border-collapse:separate; border-spacing:0}
+.table th,.table td{padding:10px 12px; border-bottom:1px solid var(--border)}
+.table thead th{position:sticky; top:0; background:var(--card); z-index:1; text-align:left}
+.search{width:100%; border:1px solid var(--border); background:#0e1319; color:var(--text); border-radius:10px; padding:10px 12px}
+.kbd{background:#1b212a; border:1px solid var(--border); padding:2px 6px; border-radius:6px; font-size:12px; color:var(--muted)}
+.grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:12px}
+.thumb{display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:12px; border:1px solid var(--border); background:#0e1319}
+.meta{font-size:12px; color:var(--muted); margin-top:6px}
+.small{font-size:12px; color:var(--muted)} .badge{font-variant-numeric:tabular-nums}
+.tag{display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid var(--border); color:var(--muted); margin:2px 4px 0 0}
+footer{margin-top:36px; color:var(--muted); font-size:12px}
+.sortable th{cursor:pointer}
+.table-wrap{
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch; /* momentum scrolling on iOS */
+}
+.table{ min-width: 700px; } /* prevents columns from squishing too hard */
+.table thead, .table thead tr, .table thead th{ overflow: visible; }
+.table th { text-wrap: nowrap; }
+
+/* Uniform, letterboxed grid */
+.grid.uniform { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:12px }
+.grid.uniform .thumbbox{
+  position:relative; width:100%; aspect-ratio:4/3;
+  background:#0e1319; border:1px solid var(--border); border-radius:12px;
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.grid.uniform .thumbbox img.thumb{ width:100%; height:100%; object-fit:contain }
+
+.stars{
+  font-size:14px;
+  letter-spacing:1px;
+  color:#ffcc33;         /* gold */
+  text-shadow:1px 1px 2px rgba(0,0,0,.4);
+}
+.stars::selection{ background:transparent; } /* cleaner highlighting */
+
+/* Lightbox modal */
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.85); z-index:1000}
+.modal.open{display:flex}
+.modal img{max-width:95vw; max-height:90vh; border-radius:12px; border:1px solid var(--border); background:#000}
+.modal .caption{position:absolute; left:0; right:0; bottom:12px; text-align:center; color:#e6e6e6; font-size:12px; padding:0 16px}
+.modal .nav{position:absolute; top:50%; transform:translateY(-50%); font-size:42px; line-height:42px; padding:12px; cursor:pointer; user-select:none; color:#e6e6e6}
+.modal .prev{left:12px}
+.modal .next{right:12px}
+.modal .close{position:absolute; top:12px; right:16px; font-size:28px; line-height:28px; cursor:pointer; user-select:none; color:#e6e6e6}
+.modal .caption{ white-space:normal; word-break:break-word; }
+.modal .caption a{ text-decoration:underline; }
+@media (max-width: 640px){
+  .modal .caption{
+    position:absolute; bottom:0; left:0; right:0;
+    background:rgba(0,0,0,0.55);
+    padding:6px 12px; font-size:12px;
+    white-space:normal;
+  }
+}
+@media (min-width: 641px){
+  .modal{
+    /* stack image + caption vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal img{
+    max-height: 80vh;   /* leave room for caption */
+    display: block;
+  }
+  .modal .caption{
+    position: static;   /* below the image */
+    margin-top: 12px;
+    max-width: 95vw;
+    text-align: center;
+    font-size: 13px;
+    color: #e6e6e6;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+/* Spotlight */
+.spotlight{ display:block; width:240px; }
+.spot-card{ display:block; text-decoration:none; }
+.spot-img{
+  display:block; width:100%; height:auto;
+  border-radius:12px; border:1px solid var(--border); background:#0e1319;
+  aspect-ratio:4/3; object-fit:contain;
+}
+.spot-meta{
+  display:flex; gap:8px; align-items:center; margin-top:8px; color:var(--text); justify-content: center;
+  font-size:13px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <div>
+    <div class="h1">Bird Lifer Catalog</div>
+    <div class="sub">Life count · 401 species</div>
+  </div>
+  <div class="spotlight">
+    <div id="spotlight-root" class="card" aria-live="polite">
+      <div class="small">Loading featured photo…</div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:16px">
+  <input id="q" class="search" placeholder="Search by common or scientific name…" oninput="tableFilter('q','speciesTable')" />
+  <div class="small" style="margin-top:6px">Click table headers to sort · Press <span class="kbd">/</span> to focus search in most browsers.</div>
+</div>
+
+<div class="card">
+  <div class="table-wrap">
+  <table class="table sortable" id="speciesTable">
+    <thead>
+      <tr>
+        <th>Bird</th>
+        <th>Scientific</th>
+        <th>Lifer #</th>
+        <th>Photos</th>
+        <th>Photo Actions and Traits</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><a href="species/fish-crow.html">Fish Crow</a></td>
+        <td class="small"><i>Corvus ossifragus</i></td>
+        <td class="badge">1</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/european-starling.html">European Starling</a></td>
+        <td class="small"><i>Sturnus vulgaris</i></td>
+        <td class="badge">2</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Bath, Molting, Perched, Vocalizing, Walking</span>
+    <span class='tag'>T: Eye, Irridesence</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-robin.html">American Robin</a></td>
+        <td class="small"><i>Turdus migratorius</i></td>
+        <td class="badge">3</td>
+        <td class="badge">8</td>
+        <td><span class='tag'>A: Eating, Feeding, Nesting, Perched, Vocalizing</span>
+    <span class='tag'>T: Eye, Washed</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-cardinal.html">Northern Cardinal</a></td>
+        <td class="small"><i>Cardinalis cardinalis</i></td>
+        <td class="badge">4</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Duel, Perched</span>
+    <span class='tag'>T: Borb, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-flicker.html">Northern Flicker</a></td>
+        <td class="small"><i>Colaptes auratus</i></td>
+        <td class="badge">5</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Foraging, Loafing, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-jay.html">Blue Jay</a></td>
+        <td class="small"><i>Cyanocitta cristata</i></td>
+        <td class="badge">6</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: BIF, Caching, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-winged-blackbird.html">Red-winged Blackbird</a></td>
+        <td class="small"><i>Agelaius phoeniceus</i></td>
+        <td class="badge">7</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Perched, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-mockingbird.html">Northern Mockingbird</a></td>
+        <td class="small"><i>Mimus polyglottos</i></td>
+        <td class="badge">8</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Display, Eating, Goofing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/carolina-wren.html">Carolina Wren</a></td>
+        <td class="small"><i>Thryothorus ludovicianus</i></td>
+        <td class="badge">9</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/song-sparrow.html">Song Sparrow</a></td>
+        <td class="small"><i>Melospiza melodia</i></td>
+        <td class="badge">10</td>
+        <td class="badge">10</td>
+        <td><span class='tag'>A: Foraging, Perched, Vocalizing</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/carolina-chickadee.html">Carolina Chickadee</a></td>
+        <td class="small"><i>Poecile carolinensis</i></td>
+        <td class="badge">11</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/mourning-dove.html">Mourning Dove</a></td>
+        <td class="small"><i>Zenaida macroura</i></td>
+        <td class="badge">12</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing</span>
+    <span class='tag'>T: Eye, Irridescent</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cedar-waxwing.html">Cedar Waxwing</a></td>
+        <td class="small"><i>Bombycilla cedrorum</i></td>
+        <td class="badge">13</td>
+        <td class="badge">10</td>
+        <td><span class='tag'>A: BIF, Hunting, Nest-build, Perched, Stretching</span>
+    <span class='tag'>T: Borb</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-goldfinch.html">American Goldfinch</a></td>
+        <td class="small"><i>Spinus tristis</i></td>
+        <td class="badge">14</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Foraging, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-throated-sparrow.html">White-throated Sparrow</a></td>
+        <td class="small"><i>Zonotrichia albicollis</i></td>
+        <td class="badge">15</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Eating, Foraging, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-crow.html">American Crow</a></td>
+        <td class="small"><i>Corvus brachyrhynchos</i></td>
+        <td class="badge">16</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched, Walking</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-grackle.html">Common Grackle</a></td>
+        <td class="small"><i>Quiscalus quiscula</i></td>
+        <td class="badge">17</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: BIF, Eating, Perched</span>
+    <span class='tag'>T: Bronzed, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brown-headed-cowbird.html">Brown-headed Cowbird</a></td>
+        <td class="small"><i>Molothrus ater</i></td>
+        <td class="badge">18</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tufted-titmouse.html">Tufted Titmouse</a></td>
+        <td class="small"><i>Baeolophus bicolor</i></td>
+        <td class="badge">19</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Perched, Vocalizing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/dark-eyed-junco.html">Dark-eyed Junco</a></td>
+        <td class="small"><i>Junco hyemalis</i></td>
+        <td class="badge">20</td>
+        <td class="badge">10</td>
+        <td><span class='tag'>A: BIF, Foraging, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/downy-woodpecker.html">Downy Woodpecker</a></td>
+        <td class="small"><i>Dryobates pubescens</i></td>
+        <td class="badge">21</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: Feeding, Perched, Scratching</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/chipping-sparrow.html">Chipping Sparrow</a></td>
+        <td class="small"><i>Spizella passerina</i></td>
+        <td class="badge">22</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging, Perched</span>
+    <span class='tag'>T: Borb</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-gray-gnatcatcher.html">Blue-gray Gnatcatcher</a></td>
+        <td class="small"><i>Polioptila caerulea</i></td>
+        <td class="badge">23</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Perched, Stretching, Vocalizing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ruby-crowned-kinglet.html">Ruby-crowned Kinglet</a></td>
+        <td class="small"><i>Corthylio calendula</i></td>
+        <td class="badge">24</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Pensive, Ruby-crown</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ring-billed-gull.html">Ring-billed Gull</a></td>
+        <td class="small"><i>Larus delawarensis</i></td>
+        <td class="badge">25</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Loafing, Preening</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/canada-goose.html">Canada Goose</a></td>
+        <td class="small"><i>Branta canadensis</i></td>
+        <td class="badge">26</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Foraging, Loafing</span>
+    <span class='tag'>T: Banded-bird, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-coot.html">American Coot</a></td>
+        <td class="small"><i>Fulica americana</i></td>
+        <td class="badge">27</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Floating</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tree-swallow.html">Tree Swallow</a></td>
+        <td class="small"><i>Tachycineta bicolor</i></td>
+        <td class="badge">28</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Stretching</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/osprey.html">Osprey</a></td>
+        <td class="small"><i>Pandion haliaetus</i></td>
+        <td class="badge">29</td>
+        <td class="badge">8</td>
+        <td><span class='tag'>A: BIF, Eating, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-bellied-woodpecker.html">Red-bellied Woodpecker</a></td>
+        <td class="small"><i>Melanerpes carolinus</i></td>
+        <td class="badge">30</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-kestrel.html">American Kestrel</a></td>
+        <td class="small"><i>Falco sparverius</i></td>
+        <td class="badge">31</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-bluebird.html">Eastern Bluebird</a></td>
+        <td class="small"><i>Sialia sialis</i></td>
+        <td class="badge">32</td>
+        <td class="badge">11</td>
+        <td><span class='tag'>A: BIF, Loafing, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/grasshopper-sparrow.html">Grasshopper Sparrow</a></td>
+        <td class="small"><i>Ammodramus savannarum</i></td>
+        <td class="badge">33</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-meadowlark.html">Eastern Meadowlark</a></td>
+        <td class="small"><i>Sturnella magna</i></td>
+        <td class="badge">34</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/hairy-woodpecker.html">Hairy Woodpecker</a></td>
+        <td class="small"><i>Dryobates villosus</i></td>
+        <td class="badge">35</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/mallard.html">Mallard</a></td>
+        <td class="small"><i>Anas platyrhynchos</i></td>
+        <td class="badge">36</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Floating, Loafing, Preening</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/whooper-swan.html">Whooper Swan</a></td>
+        <td class="small"><i>Cygnus cygnus</i></td>
+        <td class="badge">37</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rock-pigeon.html">Rock Pigeon</a></td>
+        <td class="small"><i>Columba livia</i></td>
+        <td class="badge">38</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/european-herring-gull.html">European Herring Gull</a></td>
+        <td class="small"><i>Larus argentatus</i></td>
+        <td class="badge">39</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tufted-duck.html">Tufted Duck</a></td>
+        <td class="small"><i>Aythya fuligula</i></td>
+        <td class="badge">40</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span>
+    <span class='tag'>T: Tufts</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/greater-scaup.html">Greater Scaup</a></td>
+        <td class="small"><i>Aythya marila</i></td>
+        <td class="badge">41</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-blackbird.html">Eurasian Blackbird</a></td>
+        <td class="small"><i>Turdus merula</i></td>
+        <td class="badge">42</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Foraging, Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/graylag-goose.html">Graylag Goose</a></td>
+        <td class="small"><i>Anser anser</i></td>
+        <td class="badge">43</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/redpoll.html">Redpoll</a></td>
+        <td class="small"><i>Acanthis flammea</i></td>
+        <td class="badge">44</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/redwing.html">Redwing</a></td>
+        <td class="small"><i>Turdus iliacus</i></td>
+        <td class="badge">45</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-wigeon.html">Eurasian Wigeon</a></td>
+        <td class="small"><i>Mareca penelope</i></td>
+        <td class="badge">46</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-oystercatcher.html">Eurasian Oystercatcher</a></td>
+        <td class="small"><i>Haematopus ostralegus</i></td>
+        <td class="badge">47</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Foraging, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-headed-gull.html">Black-headed Gull</a></td>
+        <td class="small"><i>Chroicocephalus ridibundus</i></td>
+        <td class="badge">48</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Playing, Vocalizing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-black-backed-gull.html">Great Black-backed Gull</a></td>
+        <td class="small"><i>Larus marinus</i></td>
+        <td class="badge">49</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-redshank.html">Common Redshank</a></td>
+        <td class="small"><i>Tringa totanus</i></td>
+        <td class="badge">50</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-raven.html">Common Raven</a></td>
+        <td class="small"><i>Corvus corax</i></td>
+        <td class="badge">51</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Feeding</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/european-shag.html">European Shag</a></td>
+        <td class="small"><i>Gulosus aristotelis</i></td>
+        <td class="badge">52</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-eider.html">Common Eider</a></td>
+        <td class="small"><i>Somateria mollissima</i></td>
+        <td class="badge">53</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-cormorant.html">Great Cormorant</a></td>
+        <td class="small"><i>Phalacrocorax carbo</i></td>
+        <td class="badge">54</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Sunning</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-legged-kittiwake.html">Black-legged Kittiwake</a></td>
+        <td class="small"><i>Rissa tridactyla</i></td>
+        <td class="badge">55</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Nesting</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/atlantic-puffin.html">Atlantic Puffin</a></td>
+        <td class="small"><i>Fratercula arctica</i></td>
+        <td class="badge">56</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-snipe.html">Common Snipe</a></td>
+        <td class="small"><i>Gallinago gallinago</i></td>
+        <td class="badge">57</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-fulmar.html">Northern Fulmar</a></td>
+        <td class="small"><i>Fulmarus glacialis</i></td>
+        <td class="badge">58</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/iceland-gull.html">Iceland Gull</a></td>
+        <td class="small"><i>Larus glaucoides</i></td>
+        <td class="badge">59</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rock-ptarmigan.html">Rock Ptarmigan</a></td>
+        <td class="small"><i>Lagopus muta</i></td>
+        <td class="badge">60</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/chimney-swift.html">Chimney Swift</a></td>
+        <td class="small"><i>Chaetura pelagica</i></td>
+        <td class="badge">61</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gray-catbird.html">Gray Catbird</a></td>
+        <td class="small"><i>Dumetella carolinensis</i></td>
+        <td class="badge">62</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-eyed-vireo.html">Red-eyed Vireo</a></td>
+        <td class="small"><i>Vireo olivaceus</i></td>
+        <td class="badge">63</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-blue-heron.html">Great Blue Heron</a></td>
+        <td class="small"><i>Ardea herodias</i></td>
+        <td class="badge">64</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Eating, Hunting, Loafing, Nest-building</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-capped-chickadee.html">Black-capped Chickadee</a></td>
+        <td class="small"><i>Poecile atricapillus</i></td>
+        <td class="badge">65</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/baltimore-oriole.html">Baltimore Oriole</a></td>
+        <td class="small"><i>Icterus galbula</i></td>
+        <td class="badge">66</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Eating, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rose-breasted-grosbeak.html">Rose-breasted Grosbeak</a></td>
+        <td class="small"><i>Pheucticus ludovicianus</i></td>
+        <td class="badge">67</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Eating, Perched</span>
+    <span class='tag'>T: Eye, Rose-breast</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ruby-throated-hummingbird.html">Ruby-throated Hummingbird</a></td>
+        <td class="small"><i>Archilochus colubris</i></td>
+        <td class="badge">68</td>
+        <td class="badge">8</td>
+        <td><span class='tag'>A: BIF, Feeder, Perched, Stretching</span>
+    <span class='tag'>T: Eye, Gorget, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/turkey-vulture.html">Turkey Vulture</a></td>
+        <td class="small"><i>Cathartes aura</i></td>
+        <td class="badge">69</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/warbling-vireo.html">Warbling Vireo</a></td>
+        <td class="small"><i>Vireo gilvus</i></td>
+        <td class="badge">70</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Feeding</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-oystercatcher.html">American Oystercatcher</a></td>
+        <td class="small"><i>Haematopus palliatus</i></td>
+        <td class="badge">71</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/laughing-gull.html">Laughing Gull</a></td>
+        <td class="small"><i>Leucophaeus atricilla</i></td>
+        <td class="badge">72</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-collared-dove.html">Eurasian Collared-Dove</a></td>
+        <td class="small"><i>Streptopelia decaocto</i></td>
+        <td class="badge">73</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Feeder, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/spotted-towhee.html">Spotted Towhee</a></td>
+        <td class="small"><i>Pipilo maculatus</i></td>
+        <td class="badge">74</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: Food, Perched, Vocalizing</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/western-kingbird.html">Western Kingbird</a></td>
+        <td class="small"><i>Tyrannus verticalis</i></td>
+        <td class="badge">75</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-billed-magpie.html">Black-billed Magpie</a></td>
+        <td class="small"><i>Pica hudsonia</i></td>
+        <td class="badge">76</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched, Vocalizing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-tailed-grackle.html">Great-tailed Grackle</a></td>
+        <td class="small"><i>Quiscalus mexicanus</i></td>
+        <td class="badge">77</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Pre-vocalizing, Vocalizing, Walking</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-white-pelican.html">American White Pelican</a></td>
+        <td class="small"><i>Pelecanus erythrorhynchos</i></td>
+        <td class="badge">78</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bullock-s-oriole.html">Bullock&#39;s Oriole</a></td>
+        <td class="small"><i>Icterus bullockii</i></td>
+        <td class="badge">79</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-warbler.html">Yellow Warbler</a></td>
+        <td class="small"><i>Setophaga petechia</i></td>
+        <td class="badge">80</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-kingbird.html">Eastern Kingbird</a></td>
+        <td class="small"><i>Tyrannus tyrannus</i></td>
+        <td class="badge">81</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Chasing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bald-eagle.html">Bald Eagle</a></td>
+        <td class="small"><i>Haliaeetus leucocephalus</i></td>
+        <td class="badge">82</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-house-wren.html">Northern House Wren</a></td>
+        <td class="small"><i>Troglodytes aedon</i></td>
+        <td class="badge">83</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Eyeing, Perched, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-breasted-nuthatch.html">White-breasted Nuthatch</a></td>
+        <td class="small"><i>Sitta carolinensis</i></td>
+        <td class="badge">84</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Foraging, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/double-crested-cormorant.html">Double-crested Cormorant</a></td>
+        <td class="small"><i>Nannopterum auritum</i></td>
+        <td class="badge">85</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing, Parading, Swimming</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/wood-duck.html">Wood Duck</a></td>
+        <td class="small"><i>Aix sponsa</i></td>
+        <td class="badge">86</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: BIF, Floating, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/acadian-flycatcher.html">Acadian Flycatcher</a></td>
+        <td class="small"><i>Empidonax virescens</i></td>
+        <td class="badge">87</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-rough-winged-swallow.html">Northern Rough-winged Swallow</a></td>
+        <td class="small"><i>Stelgidopteryx serripennis</i></td>
+        <td class="badge">88</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/indigo-bunting.html">Indigo Bunting</a></td>
+        <td class="small"><i>Passerina cyanea</i></td>
+        <td class="badge">89</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/sandhill-crane.html">Sandhill Crane</a></td>
+        <td class="small"><i>Antigone canadensis</i></td>
+        <td class="badge">90</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Foraging</span>
+    <span class='tag'>T: Eye, Not-rufous-stained, Rufous-stained</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/killdeer.html">Killdeer</a></td>
+        <td class="small"><i>Charadrius vociferus</i></td>
+        <td class="badge">91</td>
+        <td class="badge">8</td>
+        <td><span class='tag'>A: BIF, Copulating, Familying, Loafing, Nest-clearing, Nesting, Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/barn-swallow.html">Barn Swallow</a></td>
+        <td class="small"><i>Hirundo rustica</i></td>
+        <td class="badge">92</td>
+        <td class="badge">8</td>
+        <td><span class='tag'>A: BIF, Eating, Loafing, Preening</span>
+    <span class='tag'>T: Eye, Pantaloon</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/wild-turkey.html">Wild Turkey</a></td>
+        <td class="small"><i>Meleagris gallopavo</i></td>
+        <td class="badge">93</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/clark-s-nutcracker.html">Clark&#39;s Nutcracker</a></td>
+        <td class="small"><i>Nucifraga columbiana</i></td>
+        <td class="badge">94</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/mountain-chickadee.html">Mountain Chickadee</a></td>
+        <td class="small"><i>Poecile gambeli</i></td>
+        <td class="badge">95</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-breasted-nuthatch.html">Red-breasted Nuthatch</a></td>
+        <td class="small"><i>Sitta canadensis</i></td>
+        <td class="badge">96</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Foraging</span>
+    <span class='tag'>T: Red-breast</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/steller-s-jay.html">Steller&#39;s Jay</a></td>
+        <td class="small"><i>Cyanocitta stelleri</i></td>
+        <td class="badge">97</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-towhee.html">Eastern Towhee</a></td>
+        <td class="small"><i>Pipilo erythrophthalmus</i></td>
+        <td class="badge">98</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Loafing, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-phoebe.html">Eastern Phoebe</a></td>
+        <td class="small"><i>Sayornis phoebe</i></td>
+        <td class="badge">99</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Eating, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/magnolia-warbler.html">Magnolia Warbler</a></td>
+        <td class="small"><i>Setophaga magnolia</i></td>
+        <td class="badge">100</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pileated-woodpecker.html">Pileated Woodpecker</a></td>
+        <td class="small"><i>Dryocopus pileatus</i></td>
+        <td class="badge">101</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brown-headed-nuthatch.html">Brown-headed Nuthatch</a></td>
+        <td class="small"><i>Sitta pusilla</i></td>
+        <td class="badge">102</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brown-thrasher.html">Brown Thrasher</a></td>
+        <td class="small"><i>Toxostoma rufum</i></td>
+        <td class="badge">103</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/sharp-shinned-hawk.html">Sharp-shinned Hawk</a></td>
+        <td class="small"><i>Accipiter striatus</i></td>
+        <td class="badge">104</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Legs</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-shouldered-hawk.html">Red-shouldered Hawk</a></td>
+        <td class="small"><i>Buteo lineatus</i></td>
+        <td class="badge">105</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye, Red-shoulders</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/belted-kingfisher.html">Belted Kingfisher</a></td>
+        <td class="small"><i>Megaceryle alcyon</i></td>
+        <td class="badge">106</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-rumped-warbler.html">Yellow-rumped Warbler</a></td>
+        <td class="small"><i>Setophaga coronata</i></td>
+        <td class="badge">107</td>
+        <td class="badge">11</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye, Yellow-rump</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brown-creeper.html">Brown Creeper</a></td>
+        <td class="small"><i>Certhia americana</i></td>
+        <td class="badge">108</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Foraging</span>
+    <span class='tag'>T: Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-vulture.html">Black Vulture</a></td>
+        <td class="small"><i>Coragyps atratus</i></td>
+        <td class="badge">109</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing, Perched, Sunning</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cooper-s-hawk.html">Cooper&#39;s Hawk</a></td>
+        <td class="small"><i>Astur cooperii</i></td>
+        <td class="badge">110</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Feeding, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-tree-sparrow.html">American Tree Sparrow</a></td>
+        <td class="small"><i>Spizelloides arborea</i></td>
+        <td class="badge">111</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-bellied-sapsucker.html">Yellow-bellied Sapsucker</a></td>
+        <td class="small"><i>Sphyrapicus varius</i></td>
+        <td class="badge">112</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Eating, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-tailed-hawk.html">Red-tailed Hawk</a></td>
+        <td class="small"><i>Buteo jamaicensis</i></td>
+        <td class="badge">113</td>
+        <td class="badge">12</td>
+        <td><span class='tag'>A: BIF, Perched, Vocalizing</span>
+    <span class='tag'>T: Banded, Eye, Red-tail</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cackling-goose.html">Cackling Goose</a></td>
+        <td class="small"><i>Branta hutchinsii</i></td>
+        <td class="badge">114</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/trumpeter-swan.html">Trumpeter Swan</a></td>
+        <td class="small"><i>Cygnus buccinator</i></td>
+        <td class="badge">115</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/golden-crowned-kinglet.html">Golden-crowned Kinglet</a></td>
+        <td class="small"><i>Regulus satrapa</i></td>
+        <td class="badge">116</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Moving, Perched</span>
+    <span class='tag'>T: Borb</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bonaparte-s-gull.html">Bonaparte&#39;s Gull</a></td>
+        <td class="small"><i>Chroicocephalus philadelphia</i></td>
+        <td class="badge">117</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/hermit-thrush.html">Hermit Thrush</a></td>
+        <td class="small"><i>Catharus guttatus</i></td>
+        <td class="badge">118</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bufflehead.html">Bufflehead</a></td>
+        <td class="small"><i>Bucephala albeola</i></td>
+        <td class="badge">119</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Floating</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/hooded-merganser.html">Hooded Merganser</a></td>
+        <td class="small"><i>Lophodytes cucullatus</i></td>
+        <td class="badge">120</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Floating, Resting</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/green-winged-teal.html">Green-winged Teal</a></td>
+        <td class="small"><i>Anas crecca</i></td>
+        <td class="badge">121</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/canada-jay.html">Canada Jay</a></td>
+        <td class="small"><i>Perisoreus canadensis</i></td>
+        <td class="badge">122</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging, Surveying</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bushtit.html">Bushtit</a></td>
+        <td class="small"><i>Psaltriparus minimus</i></td>
+        <td class="badge">123</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Food, Foraging, Moving, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/fox-sparrow.html">Fox Sparrow</a></td>
+        <td class="small"><i>Passerella iliaca</i></td>
+        <td class="badge">124</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/forster-s-tern.html">Forster&#39;s Tern</a></td>
+        <td class="small"><i>Sterna forsteri</i></td>
+        <td class="badge">125</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Forked-tail</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brown-pelican.html">Brown Pelican</a></td>
+        <td class="small"><i>Pelecanus occidentalis</i></td>
+        <td class="badge">126</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pine-warbler.html">Pine Warbler</a></td>
+        <td class="small"><i>Setophaga pinus</i></td>
+        <td class="badge">127</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/boat-tailed-grackle.html">Boat-tailed Grackle</a></td>
+        <td class="small"><i>Quiscalus major</i></td>
+        <td class="badge">128</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-egret.html">Great Egret</a></td>
+        <td class="small"><i>Ardea alba</i></td>
+        <td class="badge">129</td>
+        <td class="badge">9</td>
+        <td><span class='tag'>A: BIF, Nesting, Perched, Preening, Wading</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/sanderling.html">Sanderling</a></td>
+        <td class="small"><i>Calidris alba</i></td>
+        <td class="badge">130</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Running</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/wilson-s-snipe.html">Wilson&#39;s Snipe</a></td>
+        <td class="small"><i>Gallinago delicata</i></td>
+        <td class="badge">131</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/greater-yellowlegs.html">Greater Yellowlegs</a></td>
+        <td class="small"><i>Tringa melanoleuca</i></td>
+        <td class="badge">132</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/swamp-sparrow.html">Swamp Sparrow</a></td>
+        <td class="small"><i>Melospiza georgiana</i></td>
+        <td class="badge">133</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-black-duck.html">American Black Duck</a></td>
+        <td class="small"><i>Anas rubripes</i></td>
+        <td class="badge">134</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Wading</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rusty-blackbird.html">Rusty Blackbird</a></td>
+        <td class="small"><i>Euphagus carolinus</i></td>
+        <td class="badge">135</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-eyed-vireo.html">White-eyed Vireo</a></td>
+        <td class="small"><i>Vireo griseus</i></td>
+        <td class="badge">136</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-crested-flycatcher.html">Great Crested Flycatcher</a></td>
+        <td class="small"><i>Myiarchus crinitus</i></td>
+        <td class="badge">137</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Leaning, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-throated-vireo.html">Yellow-throated Vireo</a></td>
+        <td class="small"><i>Vireo flavifrons</i></td>
+        <td class="badge">138</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ovenbird.html">Ovenbird</a></td>
+        <td class="small"><i>Seiurus aurocapilla</i></td>
+        <td class="badge">139</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/scarlet-tanager.html">Scarlet Tanager</a></td>
+        <td class="small"><i>Piranga olivacea</i></td>
+        <td class="badge">140</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Floofing, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-redstart.html">American Redstart</a></td>
+        <td class="small"><i>Setophaga ruticilla</i></td>
+        <td class="badge">141</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Tail-feathers</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/orchard-oriole.html">Orchard Oriole</a></td>
+        <td class="small"><i>Icterus spurius</i></td>
+        <td class="badge">142</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/swainson-s-thrush.html">Swainson&#39;s Thrush</a></td>
+        <td class="small"><i>Catharus ustulatus</i></td>
+        <td class="badge">143</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Feeding, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blackpoll-warbler.html">Blackpoll Warbler</a></td>
+        <td class="small"><i>Setophaga striata</i></td>
+        <td class="badge">144</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-wood-pewee.html">Eastern Wood-Pewee</a></td>
+        <td class="small"><i>Contopus virens</i></td>
+        <td class="badge">145</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Perched, Stretching, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/spotted-sandpiper.html">Spotted Sandpiper</a></td>
+        <td class="small"><i>Actitis macularius</i></td>
+        <td class="badge">146</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Walking</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/louisiana-waterthrush.html">Louisiana Waterthrush</a></td>
+        <td class="small"><i>Parkesia motacilla</i></td>
+        <td class="badge">147</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Eating, Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/green-heron.html">Green Heron</a></td>
+        <td class="small"><i>Butorides virescens</i></td>
+        <td class="badge">148</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Hunting, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/willow-flycatcher.html">Willow Flycatcher</a></td>
+        <td class="small"><i>Empidonax traillii</i></td>
+        <td class="badge">149</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Perched, Vocalizing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-merganser.html">Common Merganser</a></td>
+        <td class="small"><i>Mergus merganser</i></td>
+        <td class="badge">150</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Floating, Loafing, Wading</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/broad-winged-hawk.html">Broad-winged Hawk</a></td>
+        <td class="small"><i>Buteo platypterus</i></td>
+        <td class="badge">151</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-parula.html">Northern Parula</a></td>
+        <td class="small"><i>Setophaga americana</i></td>
+        <td class="badge">152</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-headed-vireo.html">Blue-headed Vireo</a></td>
+        <td class="small"><i>Vireo solitarius</i></td>
+        <td class="badge">153</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/winter-wren.html">Winter Wren</a></td>
+        <td class="small"><i>Troglodytes hiemalis</i></td>
+        <td class="badge">154</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched, Standing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-yellowthroat.html">Common Yellowthroat</a></td>
+        <td class="small"><i>Geothlypis trichas</i></td>
+        <td class="badge">155</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Perched, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/western-gull.html">Western Gull</a></td>
+        <td class="small"><i>Larus occidentalis</i></td>
+        <td class="badge">156</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Eating, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/caspian-tern.html">Caspian Tern</a></td>
+        <td class="small"><i>Hydroprogne caspia</i></td>
+        <td class="badge">157</td>
+        <td class="badge">12</td>
+        <td><span class='tag'>A: BIF, Hunting, Plunging, Salsa</span>
+    <span class='tag'>T: First-contact</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesser-yellowlegs.html">Lesser Yellowlegs</a></td>
+        <td class="small"><i>Tringa flavipes</i></td>
+        <td class="badge">158</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/greater-white-fronted-goose.html">Greater White-fronted Goose</a></td>
+        <td class="small"><i>Anser albifrons</i></td>
+        <td class="badge">159</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/willow-ptarmigan.html">Willow Ptarmigan</a></td>
+        <td class="small"><i>Lagopus lagopus</i></td>
+        <td class="badge">160</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/golden-eagle.html">Golden Eagle</a></td>
+        <td class="small"><i>Aquila chrysaetos</i></td>
+        <td class="badge">161</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-harrier.html">Northern Harrier</a></td>
+        <td class="small"><i>Circus hudsonius</i></td>
+        <td class="badge">162</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Hunting</span>
+    <span class='tag'>T: Eye, White-rump</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/boreal-chickadee.html">Boreal Chickadee</a></td>
+        <td class="small"><i>Poecile hudsonicus</i></td>
+        <td class="badge">163</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-winged-crossbill.html">White-winged Crossbill</a></td>
+        <td class="small"><i>Loxia leucoptera</i></td>
+        <td class="badge">164</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-goshawk.html">American Goshawk</a></td>
+        <td class="small"><i>Astur atricapillus</i></td>
+        <td class="badge">165</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Surveying</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-pipit.html">American Pipit</a></td>
+        <td class="small"><i>Anthus rubescens</i></td>
+        <td class="badge">166</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-crowned-sparrow.html">White-crowned Sparrow</a></td>
+        <td class="small"><i>Zonotrichia leucophrys</i></td>
+        <td class="badge">167</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: Loafing, Molting, Perched</span>
+    <span class='tag'>T: Dark-lore, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-shoveler.html">Northern Shoveler</a></td>
+        <td class="small"><i>Spatula clypeata</i></td>
+        <td class="badge">168</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Floating</span>
+    <span class='tag'>T: Eye, Sun-coloration</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ring-necked-duck.html">Ring-necked Duck</a></td>
+        <td class="small"><i>Aythya collaris</i></td>
+        <td class="badge">169</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Floating</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/spruce-grouse.html">Spruce Grouse</a></td>
+        <td class="small"><i>Canachites canadensis</i></td>
+        <td class="badge">170</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-necked-grebe.html">Red-necked Grebe</a></td>
+        <td class="small"><i>Podiceps grisegena</i></td>
+        <td class="badge">171</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/merlin.html">Merlin</a></td>
+        <td class="small"><i>Falco columbarius</i></td>
+        <td class="badge">172</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Eating, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/orange-crowned-warbler.html">Orange-crowned Warbler</a></td>
+        <td class="small"><i>Leiothlypis celata</i></td>
+        <td class="badge">173</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-headed-woodpecker.html">Red-headed Woodpecker</a></td>
+        <td class="small"><i>Melanerpes erythrocephalus</i></td>
+        <td class="badge">174</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-and-white-warbler.html">Black-and-white Warbler</a></td>
+        <td class="small"><i>Mniotilta varia</i></td>
+        <td class="badge">175</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cape-may-warbler.html">Cape May Warbler</a></td>
+        <td class="small"><i>Setophaga tigrina</i></td>
+        <td class="badge">176</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Borb</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/connecticut-warbler.html">Connecticut Warbler</a></td>
+        <td class="small"><i>Oporornis agilis</i></td>
+        <td class="badge">177</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lincoln-s-sparrow.html">Lincoln&#39;s Sparrow</a></td>
+        <td class="small"><i>Melospiza lincolnii</i></td>
+        <td class="badge">178</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/mute-swan.html">Mute Swan</a></td>
+        <td class="small"><i>Cygnus olor</i></td>
+        <td class="badge">179</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Resting</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-kestrel.html">Eurasian Kestrel</a></td>
+        <td class="small"><i>Falco tinnunculus</i></td>
+        <td class="badge">180</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-coot.html">Eurasian Coot</a></td>
+        <td class="small"><i>Fulica atra</i></td>
+        <td class="badge">181</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gray-heron.html">Gray Heron</a></td>
+        <td class="small"><i>Ardea cinerea</i></td>
+        <td class="badge">182</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Wading</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-magpie.html">Eurasian Magpie</a></td>
+        <td class="small"><i>Pica pica</i></td>
+        <td class="badge">183</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Loafing, Walking</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-jackdaw.html">Eurasian Jackdaw</a></td>
+        <td class="small"><i>Coloeus monedula</i></td>
+        <td class="badge">184</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rook.html">Rook</a></td>
+        <td class="small"><i>Corvus frugilegus</i></td>
+        <td class="badge">185</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-tit.html">Great Tit</a></td>
+        <td class="small"><i>Parus major</i></td>
+        <td class="badge">186</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/european-goldfinch.html">European Goldfinch</a></td>
+        <td class="small"><i>Carduelis carduelis</i></td>
+        <td class="badge">187</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-green-woodpecker.html">Eurasian Green Woodpecker</a></td>
+        <td class="small"><i>Picus viridis</i></td>
+        <td class="badge">188</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-jay.html">Eurasian Jay</a></td>
+        <td class="small"><i>Garrulus glandarius</i></td>
+        <td class="badge">189</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/long-tailed-tit.html">Long-tailed Tit</a></td>
+        <td class="small"><i>Aegithalos caudatus</i></td>
+        <td class="badge">190</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ring-necked-pheasant.html">Ring-necked Pheasant</a></td>
+        <td class="small"><i>Phasianus colchicus</i></td>
+        <td class="badge">191</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-blue-tit.html">Eurasian Blue Tit</a></td>
+        <td class="small"><i>Cyanistes caeruleus</i></td>
+        <td class="badge">192</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-moorhen.html">Eurasian Moorhen</a></td>
+        <td class="small"><i>Gallinula chloropus</i></td>
+        <td class="badge">193</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/short-toed-treecreeper.html">Short-toed Treecreeper</a></td>
+        <td class="small"><i>Certhia brachydactyla</i></td>
+        <td class="badge">194</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-chaffinch.html">Common Chaffinch</a></td>
+        <td class="small"><i>Fringilla coelebs</i></td>
+        <td class="badge">195</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/european-robin.html">European Robin</a></td>
+        <td class="small"><i>Erithacus rubecula</i></td>
+        <td class="badge">196</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-crested-grebe.html">Great Crested Grebe</a></td>
+        <td class="small"><i>Podiceps cristatus</i></td>
+        <td class="badge">197</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-kite.html">Red Kite</a></td>
+        <td class="small"><i>Milvus milvus</i></td>
+        <td class="badge">198</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gadwall.html">Gadwall</a></td>
+        <td class="small"><i>Mareca strepera</i></td>
+        <td class="badge">199</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Floating, Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pied-billed-grebe.html">Pied-billed Grebe</a></td>
+        <td class="small"><i>Podilymbus podiceps</i></td>
+        <td class="badge">200</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-goldeneye.html">Common Goldeneye</a></td>
+        <td class="small"><i>Bucephala clangula</i></td>
+        <td class="badge">201</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ruddy-duck.html">Ruddy Duck</a></td>
+        <td class="small"><i>Oxyura jamaicensis</i></td>
+        <td class="badge">202</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Floating, Sleeping</span>
+    <span class='tag'>T: Sky-blue-bill</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-herring-gull.html">American Herring Gull</a></td>
+        <td class="small"><i>Larus smithsonianus</i></td>
+        <td class="badge">203</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-breasted-merganser.html">Red-breasted Merganser</a></td>
+        <td class="small"><i>Mergus serrator</i></td>
+        <td class="badge">204</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gray-headed-chachalaca.html">Gray-headed Chachalaca</a></td>
+        <td class="small"><i>Ortalis cinereiceps</i></td>
+        <td class="badge">205</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-billed-pigeon.html">Red-billed Pigeon</a></td>
+        <td class="small"><i>Patagioenas flavirostris</i></td>
+        <td class="badge">206</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/vaux-s-swift.html">Vaux&#39;s Swift</a></td>
+        <td class="small"><i>Chaetura vauxi</i></td>
+        <td class="badge">207</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/orange-chinned-parakeet.html">Orange-chinned Parakeet</a></td>
+        <td class="small"><i>Brotogeris jugularis</i></td>
+        <td class="badge">208</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/mountain-elaenia.html">Mountain Elaenia</a></td>
+        <td class="small"><i>Elaenia frantzii</i></td>
+        <td class="badge">209</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/dusky-capped-flycatcher.html">Dusky-capped Flycatcher</a></td>
+        <td class="small"><i>Myiarchus tuberculifer</i></td>
+        <td class="badge">210</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-kiskadee.html">Great Kiskadee</a></td>
+        <td class="small"><i>Pitangus sulphuratus</i></td>
+        <td class="badge">211</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Menacing, Perched</span>
+    <span class='tag'>T: Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/social-flycatcher.html">Social Flycatcher</a></td>
+        <td class="small"><i>Myiozetetes similis</i></td>
+        <td class="badge">212</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brown-jay.html">Brown Jay</a></td>
+        <td class="small"><i>Cyanocorax morio</i></td>
+        <td class="badge">213</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Eating, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-and-white-swallow.html">Blue-and-white Swallow</a></td>
+        <td class="small"><i>Pygochelidon cyanoleuca</i></td>
+        <td class="badge">214</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/southern-house-wren.html">Southern House Wren</a></td>
+        <td class="small"><i>Troglodytes musculus</i></td>
+        <td class="badge">215</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched, Preening</span>
+    <span class='tag'>T: Eye, Wet</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cabanis-s-wren.html">Cabanis&#39;s Wren</a></td>
+        <td class="small"><i>Cantorchilus modestus</i></td>
+        <td class="badge">216</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/clay-colored-thrush.html">Clay-colored Thrush</a></td>
+        <td class="small"><i>Turdus grayi</i></td>
+        <td class="badge">217</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rufous-collared-sparrow.html">Rufous-collared Sparrow</a></td>
+        <td class="small"><i>Zonotrichia capensis</i></td>
+        <td class="badge">218</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Foraging, Perched, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-eared-ground-sparrow.html">White-eared Ground-Sparrow</a></td>
+        <td class="small"><i>Melozone leucotis</i></td>
+        <td class="badge">219</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Foraging, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/melodious-blackbird.html">Melodious Blackbird</a></td>
+        <td class="small"><i>Dives dives</i></td>
+        <td class="badge">220</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tennessee-warbler.html">Tennessee Warbler</a></td>
+        <td class="small"><i>Leiothlypis peregrina</i></td>
+        <td class="badge">221</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Foraging, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-throated-green-warbler.html">Black-throated Green Warbler</a></td>
+        <td class="small"><i>Setophaga virens</i></td>
+        <td class="badge">222</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/wilson-s-warbler.html">Wilson&#39;s Warbler</a></td>
+        <td class="small"><i>Cardellina pusilla</i></td>
+        <td class="badge">223</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/scarlet-thighed-dacnis.html">Scarlet-thighed Dacnis</a></td>
+        <td class="small"><i>Dacnis venusta</i></td>
+        <td class="badge">224</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Borb, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/buff-throated-saltator.html">Buff-throated Saltator</a></td>
+        <td class="small"><i>Saltator maximus</i></td>
+        <td class="badge">225</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cinnamon-bellied-saltator.html">Cinnamon-bellied Saltator</a></td>
+        <td class="small"><i>Saltator grandis</i></td>
+        <td class="badge">226</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesser-violetear.html">Lesser Violetear</a></td>
+        <td class="small"><i>Colibri cyanotus</i></td>
+        <td class="badge">227</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/green-crowned-brilliant.html">Green-crowned Brilliant</a></td>
+        <td class="small"><i>Heliodoxa jacula</i></td>
+        <td class="badge">228</td>
+        <td class="badge">8</td>
+        <td><span class='tag'>A: Feeder, Perched</span>
+    <span class='tag'>T: Borb, Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/purple-throated-mountain-gem.html">Purple-throated Mountain-gem</a></td>
+        <td class="small"><i>Lampornis calolaemus</i></td>
+        <td class="badge">229</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/magenta-throated-woodstar.html">Magenta-throated Woodstar</a></td>
+        <td class="small"><i>Philodice bryantae</i></td>
+        <td class="badge">230</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Feeder</span>
+    <span class='tag'>T: Eye, Gorget, Limited-gorget</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/violet-sabrewing.html">Violet Sabrewing</a></td>
+        <td class="small"><i>Campylopterus hemileucurus</i></td>
+        <td class="badge">231</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Gorget, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/stripe-tailed-hummingbird.html">Stripe-tailed Hummingbird</a></td>
+        <td class="small"><i>Eupherusa eximia</i></td>
+        <td class="badge">232</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Eating, Feeder</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-chlorospingus.html">Common Chlorospingus</a></td>
+        <td class="small"><i>Chlorospingus flavopectus</i></td>
+        <td class="badge">233</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bananaquit.html">Bananaquit</a></td>
+        <td class="small"><i>Coereba flaveola</i></td>
+        <td class="badge">234</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Feeder</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tropical-kingbird.html">Tropical Kingbird</a></td>
+        <td class="small"><i>Tyrannus melancholicus</i></td>
+        <td class="badge">235</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-emerald-toucanet.html">Northern Emerald-Toucanet</a></td>
+        <td class="small"><i>Aulacorhynchus prasinus</i></td>
+        <td class="badge">236</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: blue-throat</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-collared-swift.html">White-collared Swift</a></td>
+        <td class="small"><i>Streptoprocne zonaris</i></td>
+        <td class="badge">237</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesson-s-motmot.html">Lesson&#39;s Motmot</a></td>
+        <td class="small"><i>Momotus lessonii</i></td>
+        <td class="badge">238</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye, Raquet-tipped</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/keel-billed-toucan.html">Keel-billed Toucan</a></td>
+        <td class="small"><i>Ramphastos sulfuratus</i></td>
+        <td class="badge">239</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/hoffmann-s-woodpecker.html">Hoffmann&#39;s Woodpecker</a></td>
+        <td class="small"><i>Melanerpes hoffmannii</i></td>
+        <td class="badge">240</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/golden-olive-woodpecker.html">Golden-olive Woodpecker</a></td>
+        <td class="small"><i>Colaptes rubiginosus</i></td>
+        <td class="badge">241</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-fronted-amazon.html">White-fronted Amazon</a></td>
+        <td class="small"><i>Amazona albifrons</i></td>
+        <td class="badge">242</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-bellied-elaenia.html">Yellow-bellied Elaenia</a></td>
+        <td class="small"><i>Elaenia flavogaster</i></td>
+        <td class="badge">243</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/boat-billed-flycatcher.html">Boat-billed Flycatcher</a></td>
+        <td class="small"><i>Megarynchus pitangua</i></td>
+        <td class="badge">244</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesser-greenlet.html">Lesser Greenlet</a></td>
+        <td class="small"><i>Pachysylvia decurtata</i></td>
+        <td class="badge">245</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-gray-tanager.html">Blue-gray Tanager</a></td>
+        <td class="small"><i>Thraupis episcopus</i></td>
+        <td class="badge">246</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/morelet-s-seedeater.html">Morelet&#39;s Seedeater</a></td>
+        <td class="small"><i>Sporophila morelleti</i></td>
+        <td class="badge">247</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-faced-grassquit.html">Yellow-faced Grassquit</a></td>
+        <td class="small"><i>Tiaris olivaceus</i></td>
+        <td class="badge">248</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/crested-guan.html">Crested Guan</a></td>
+        <td class="small"><i>Penelope purpurascens</i></td>
+        <td class="badge">249</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing, Perched</span>
+    <span class='tag'>T: Crest, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-guan.html">Black Guan</a></td>
+        <td class="small"><i>Chamaepetes unicolor</i></td>
+        <td class="badge">250</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/slaty-backed-nightingale-thrush.html">Slaty-backed Nightingale-Thrush</a></td>
+        <td class="small"><i>Catharus fuscater</i></td>
+        <td class="badge">251</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/fiery-billed-aracari.html">Fiery-billed Aracari</a></td>
+        <td class="small"><i>Pteroglossus frantzii</i></td>
+        <td class="badge">252</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lineated-woodpecker.html">Lineated Woodpecker</a></td>
+        <td class="small"><i>Dryocopus lineatus</i></td>
+        <td class="badge">253</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/scarlet-macaw.html">Scarlet Macaw</a></td>
+        <td class="small"><i>Ara macao</i></td>
+        <td class="badge">254</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Eating, Loafing</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/streaked-flycatcher.html">Streaked Flycatcher</a></td>
+        <td class="small"><i>Myiodynastes maculatus</i></td>
+        <td class="badge">255</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tropical-mockingbird.html">Tropical Mockingbird</a></td>
+        <td class="small"><i>Mimus gilvus</i></td>
+        <td class="badge">256</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched, Scouting</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/worm-eating-warbler.html">Worm-eating Warbler</a></td>
+        <td class="small"><i>Helmitheros vermivorum</i></td>
+        <td class="badge">257</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/magnificent-frigatebird.html">Magnificent Frigatebird</a></td>
+        <td class="small"><i>Fregata magnificens</i></td>
+        <td class="badge">258</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/band-tailed-pigeon.html">Band-tailed Pigeon</a></td>
+        <td class="small"><i>Patagioenas fasciata</i></td>
+        <td class="badge">259</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/coppery-headed-emerald.html">Coppery-headed Emerald</a></td>
+        <td class="small"><i>Microchera cupreiceps</i></td>
+        <td class="badge">260</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rufous-tailed-hummingbird.html">Rufous-tailed Hummingbird</a></td>
+        <td class="small"><i>Amazilia tzacatl</i></td>
+        <td class="badge">261</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Feeding</span>
+    <span class='tag'>T: Rufous-tail</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/montezuma-oropendola.html">Montezuma Oropendola</a></td>
+        <td class="small"><i>Psarocolius montezuma</i></td>
+        <td class="badge">262</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/palm-tanager.html">Palm Tanager</a></td>
+        <td class="small"><i>Thraupis palmarum</i></td>
+        <td class="badge">263</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/silver-throated-tanager.html">Silver-throated Tanager</a></td>
+        <td class="small"><i>Tangara icterocephala</i></td>
+        <td class="badge">264</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-legged-honeycreeper.html">Red-legged Honeycreeper</a></td>
+        <td class="small"><i>Cyanerpes cyaneus</i></td>
+        <td class="badge">265</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Red-legs</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-winged-dove.html">White-winged Dove</a></td>
+        <td class="small"><i>Zenaida asiatica</i></td>
+        <td class="badge">266</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/little-blue-heron.html">Little Blue Heron</a></td>
+        <td class="small"><i>Egretta caerulea</i></td>
+        <td class="badge">267</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/western-cattle-egret.html">Western Cattle-Egret</a></td>
+        <td class="small"><i>Ardea ibis</i></td>
+        <td class="badge">268</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bare-throated-tiger-heron.html">Bare-throated Tiger-Heron</a></td>
+        <td class="small"><i>Tigrisoma mexicanum</i></td>
+        <td class="badge">269</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Bare-throat, Eye, Pantaloon</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-throated-toucan.html">Yellow-throated Toucan</a></td>
+        <td class="small"><i>Ramphastos ambiguus</i></td>
+        <td class="badge">270</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-headed-caracara.html">Yellow-headed Caracara</a></td>
+        <td class="small"><i>Daptrius chimachima</i></td>
+        <td class="badge">271</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/summer-tanager.html">Summer Tanager</a></td>
+        <td class="small"><i>Piranga rubra</i></td>
+        <td class="badge">272</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/crowned-woodnymph.html">Crowned Woodnymph</a></td>
+        <td class="small"><i>Thalurania colombica</i></td>
+        <td class="badge">273</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pale-billed-woodpecker.html">Pale-billed Woodpecker</a></td>
+        <td class="small"><i>Campephilus guatemalensis</i></td>
+        <td class="badge">274</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Foraging</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-hooded-antshrike.html">Black-hooded Antshrike</a></td>
+        <td class="small"><i>Thamnophilus bridgesi</i></td>
+        <td class="badge">275</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/chestnut-sided-warbler.html">Chestnut-sided Warbler</a></td>
+        <td class="small"><i>Setophaga pensylvanica</i></td>
+        <td class="badge">276</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/scarlet-rumped-tanager.html">Scarlet-rumped Tanager</a></td>
+        <td class="small"><i>Ramphocelus passerinii</i></td>
+        <td class="badge">277</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Feed, Flailing</span>
+    <span class='tag'>T: Scarlet-rump</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-tinamou.html">Great Tinamou</a></td>
+        <td class="small"><i>Tinamus major</i></td>
+        <td class="badge">278</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/roadside-hawk.html">Roadside Hawk</a></td>
+        <td class="small"><i>Rupornis magnirostris</i></td>
+        <td class="badge">279</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-black-throated-trogon.html">Northern Black-throated Trogon</a></td>
+        <td class="small"><i>Trogon tenellus</i></td>
+        <td class="badge">280</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/reddish-egret.html">Reddish Egret</a></td>
+        <td class="small"><i>Egretta rufescens</i></td>
+        <td class="badge">281</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/snowy-egret.html">Snowy Egret</a></td>
+        <td class="small"><i>Egretta thula</i></td>
+        <td class="badge">282</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/house-finch.html">House Finch</a></td>
+        <td class="small"><i>Haemorhous mexicanus</i></td>
+        <td class="badge">283</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Disease, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-loon.html">Common Loon</a></td>
+        <td class="small"><i>Gavia immer</i></td>
+        <td class="badge">284</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australian-ibis.html">Australian Ibis</a></td>
+        <td class="small"><i>Threskiornis molucca</i></td>
+        <td class="badge">285</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing, Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/noisy-miner.html">Noisy Miner</a></td>
+        <td class="small"><i>Manorina melanocephala</i></td>
+        <td class="badge">286</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing, Perched, Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australian-magpie.html">Australian Magpie</a></td>
+        <td class="small"><i>Gymnorhina tibicen</i></td>
+        <td class="badge">287</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Drinking, Watching</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pied-currawong.html">Pied Currawong</a></td>
+        <td class="small"><i>Strepera graculina</i></td>
+        <td class="badge">288</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/torresian-crow.html">Torresian Crow</a></td>
+        <td class="small"><i>Corvus orru</i></td>
+        <td class="badge">289</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Loafing, Vocalizing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australian-brushturkey.html">Australian Brushturkey</a></td>
+        <td class="small"><i>Alectura lathami</i></td>
+        <td class="badge">290</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/dusky-moorhen.html">Dusky Moorhen</a></td>
+        <td class="small"><i>Gallinula tenebrosa</i></td>
+        <td class="badge">291</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: Floating, Foraging, Paddling, Walking</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/masked-lapwing.html">Masked Lapwing</a></td>
+        <td class="small"><i>Vanellus miles</i></td>
+        <td class="badge">292</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Walking</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/silver-gull.html">Silver Gull</a></td>
+        <td class="small"><i>Chroicocephalus novaehollandiae</i></td>
+        <td class="badge">293</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Preening</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rainbow-lorikeet.html">Rainbow Lorikeet</a></td>
+        <td class="small"><i>Trichoglossus moluccanus</i></td>
+        <td class="badge">294</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gray-butcherbird.html">Gray Butcherbird</a></td>
+        <td class="small"><i>Cracticus torquatus</i></td>
+        <td class="badge">295</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/welcome-swallow.html">Welcome Swallow</a></td>
+        <td class="small"><i>Hirundo neoxena</i></td>
+        <td class="badge">296</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Feet, Forked-tailed</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/buff-banded-rail.html">Buff-banded Rail</a></td>
+        <td class="small"><i>Gallirallus philippensis</i></td>
+        <td class="badge">297</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Foraging, Running</span>
+    <span class='tag'>T: Beak, Buff-band, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bush-thick-knee.html">Bush Thick-knee</a></td>
+        <td class="small"><i>Burhinus grallarius</i></td>
+        <td class="badge">298</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Laying, Loafing, Standing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australian-pelican.html">Australian Pelican</a></td>
+        <td class="small"><i>Pelecanus conspicillatus</i></td>
+        <td class="badge">299</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/sulphur-crested-cockatoo.html">Sulphur-crested Cockatoo</a></td>
+        <td class="small"><i>Cacatua galerita</i></td>
+        <td class="badge">300</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Eating, Perched</span>
+    <span class='tag'>T: Sulphur-crest</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/fairy-martin.html">Fairy Martin</a></td>
+        <td class="small"><i>Petrochelidon ariel</i></td>
+        <td class="badge">301</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/striated-heron.html">Striated Heron</a></td>
+        <td class="small"><i>Butorides striata</i></td>
+        <td class="badge">302</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/brahminy-kite.html">Brahminy Kite</a></td>
+        <td class="small"><i>Haliastur indus</i></td>
+        <td class="badge">303</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/scaly-breasted-lorikeet.html">Scaly-breasted Lorikeet</a></td>
+        <td class="small"><i>Trichoglossus chlorolepidotus</i></td>
+        <td class="badge">304</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Eating</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australian-tern.html">Australian Tern</a></td>
+        <td class="small"><i>Gelochelidon macrotarsa</i></td>
+        <td class="badge">305</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eastern-cattle-egret.html">Eastern Cattle-Egret</a></td>
+        <td class="small"><i>Ardea coromanda</i></td>
+        <td class="badge">306</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/little-pied-cormorant.html">Little Pied Cormorant</a></td>
+        <td class="small"><i>Microcarbo melanoleucos</i></td>
+        <td class="badge">307</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Diving, Dried, Drying, Loafing</span>
+    <span class='tag'>T: Borb</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/laughing-kookaburra.html">Laughing Kookaburra</a></td>
+        <td class="small"><i>Dacelo novaeguineae</i></td>
+        <td class="badge">308</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Foraging, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/sacred-kingfisher.html">Sacred Kingfisher</a></td>
+        <td class="small"><i>Todiramphus sanctus</i></td>
+        <td class="badge">309</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pied-butcherbird.html">Pied Butcherbird</a></td>
+        <td class="small"><i>Cracticus nigrogularis</i></td>
+        <td class="badge">310</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/magpie-lark.html">Magpie-lark</a></td>
+        <td class="small"><i>Grallina cyanoleuca</i></td>
+        <td class="badge">311</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Foraging, Hunting</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australasian-figbird.html">Australasian Figbird</a></td>
+        <td class="small"><i>Sphecotheres vieilloti</i></td>
+        <td class="badge">312</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Feeding, Perched</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tree-martin.html">Tree Martin</a></td>
+        <td class="small"><i>Petrochelidon nigricans</i></td>
+        <td class="badge">313</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/maned-duck.html">Maned Duck</a></td>
+        <td class="small"><i>Chenonetta jubata</i></td>
+        <td class="badge">314</td>
+        <td class="badge">7</td>
+        <td><span class='tag'>A: Floating, Loafing, Napping, Standing</span>
+    <span class='tag'>T: Eye, Eye-closed, Tongue, Wing-coloration</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pacific-black-duck.html">Pacific Black Duck</a></td>
+        <td class="small"><i>Anas superciliosa</i></td>
+        <td class="badge">315</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Parenting</span>
+    <span class='tag'>T: Eye, Wing-bar</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australasian-swamphen.html">Australasian Swamphen</a></td>
+        <td class="small"><i>Porphyrio melanotus</i></td>
+        <td class="badge">316</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Nest, Running, Vocalizing</span>
+    <span class='tag'>T: Eye, Food</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-faced-honeyeater.html">Blue-faced Honeyeater</a></td>
+        <td class="small"><i>Entomyzon cyanotis</i></td>
+        <td class="badge">317</td>
+        <td class="badge">5</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/australasian-darter.html">Australasian Darter</a></td>
+        <td class="small"><i>Anhinga novaehollandiae</i></td>
+        <td class="badge">318</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched, Preening</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/little-black-cormorant.html">Little Black Cormorant</a></td>
+        <td class="small"><i>Phalacrocorax sulcirostris</i></td>
+        <td class="badge">319</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-bellied-sea-eagle.html">White-bellied Sea-Eagle</a></td>
+        <td class="small"><i>Icthyophaga leucogaster</i></td>
+        <td class="badge">320</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/california-gull.html">California Gull</a></td>
+        <td class="small"><i>Larus californicus</i></td>
+        <td class="badge">321</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/field-sparrow.html">Field Sparrow</a></td>
+        <td class="small"><i>Spizella pusilla</i></td>
+        <td class="badge">322</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Foraging, Loafing, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/dunlin.html">Dunlin</a></td>
+        <td class="small"><i>Calidris alpina</i></td>
+        <td class="badge">323</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Wading</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/purple-martin.html">Purple Martin</a></td>
+        <td class="small"><i>Progne subis</i></td>
+        <td class="badge">324</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesser-black-backed-gull.html">Lesser Black-backed Gull</a></td>
+        <td class="small"><i>Larus fuscus</i></td>
+        <td class="badge">325</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-throated-loon.html">Red-throated Loon</a></td>
+        <td class="small"><i>Gavia stellata</i></td>
+        <td class="badge">326</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-ibis.html">White Ibis</a></td>
+        <td class="small"><i>Eudocimus albus</i></td>
+        <td class="badge">327</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/wood-thrush.html">Wood Thrush</a></td>
+        <td class="small"><i>Hylocichla mustelina</i></td>
+        <td class="badge">328</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/alder-flycatcher.html">Alder Flycatcher</a></td>
+        <td class="small"><i>Empidonax alnorum</i></td>
+        <td class="badge">329</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/sedge-wren.html">Sedge Wren</a></td>
+        <td class="small"><i>Cistothorus stellaris</i></td>
+        <td class="badge">330</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: Perched, Shaking, Vocalizing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/anna-s-hummingbird.html">Anna&#39;s Hummingbird</a></td>
+        <td class="small"><i>Calypte anna</i></td>
+        <td class="badge">331</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/glaucous-winged-gull.html">Glaucous-winged Gull</a></td>
+        <td class="small"><i>Larus glaucescens</i></td>
+        <td class="badge">332</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF, Loafing, Sitting</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/western-flycatcher.html">Western Flycatcher</a></td>
+        <td class="small"><i>Empidonax difficilis</i></td>
+        <td class="badge">333</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pine-siskin.html">Pine Siskin</a></td>
+        <td class="small"><i>Spinus pinus</i></td>
+        <td class="badge">334</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-throated-gray-warbler.html">Black-throated Gray Warbler</a></td>
+        <td class="small"><i>Setophaga nigrescens</i></td>
+        <td class="badge">335</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pelagic-cormorant.html">Pelagic Cormorant</a></td>
+        <td class="small"><i>Urile pelagicus</i></td>
+        <td class="badge">336</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/chestnut-backed-chickadee.html">Chestnut-backed Chickadee</a></td>
+        <td class="small"><i>Poecile rufescens</i></td>
+        <td class="badge">337</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Borb, Eye, Ruffled</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/red-crossbill.html">Red Crossbill</a></td>
+        <td class="small"><i>Loxia curvirostra</i></td>
+        <td class="badge">338</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Surveying</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-nighthawk.html">Common Nighthawk</a></td>
+        <td class="small"><i>Chordeiles minor</i></td>
+        <td class="badge">339</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/nashville-warbler.html">Nashville Warbler</a></td>
+        <td class="small"><i>Leiothlypis ruficapilla</i></td>
+        <td class="badge">340</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/palm-warbler.html">Palm Warbler</a></td>
+        <td class="small"><i>Setophaga palmarum</i></td>
+        <td class="badge">341</td>
+        <td class="badge">12</td>
+        <td><span class='tag'>A: Catching-insect, Foraging, Perched</span>
+    <span class='tag'>T: Borb, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-winged-teal.html">Blue-winged Teal</a></td>
+        <td class="small"><i>Spatula discors</i></td>
+        <td class="badge">342</td>
+        <td class="badge">6</td>
+        <td><span class='tag'>A: BIF, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/barred-owl.html">Barred Owl</a></td>
+        <td class="small"><i>Strix varia</i></td>
+        <td class="badge">343</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/yellow-billed-cuckoo.html">Yellow-billed Cuckoo</a></td>
+        <td class="small"><i>Coccyzus americanus</i></td>
+        <td class="badge">344</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/heermann-s-gull.html">Heermann&#39;s Gull</a></td>
+        <td class="small"><i>Larus heermanni</i></td>
+        <td class="badge">345</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/elegant-tern.html">Elegant Tern</a></td>
+        <td class="small"><i>Thalasseus elegans</i></td>
+        <td class="badge">346</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-throated-blue-warbler.html">Black-throated Blue Warbler</a></td>
+        <td class="small"><i>Setophaga caerulescens</i></td>
+        <td class="badge">347</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/snow-goose.html">Snow Goose</a></td>
+        <td class="small"><i>Anser caerulescens</i></td>
+        <td class="badge">348</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Resting</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/savannah-sparrow.html">Savannah Sparrow</a></td>
+        <td class="small"><i>Passerculus sandwichensis</i></td>
+        <td class="badge">349</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/woodhouse-s-scrub-jay.html">Woodhouse&#39;s Scrub-Jay</a></td>
+        <td class="small"><i>Aphelocoma woodhouseii</i></td>
+        <td class="badge">350</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/hooded-crow.html">Hooded Crow</a></td>
+        <td class="small"><i>Corvus cornix</i></td>
+        <td class="badge">351</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Walking</span>
+    <span class='tag'>T: Hood</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/white-wagtail.html">White Wagtail</a></td>
+        <td class="small"><i>Motacilla alba</i></td>
+        <td class="badge">352</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Loafing, Walking</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-ringed-plover.html">Common Ringed Plover</a></td>
+        <td class="small"><i>Charadrius hiaticula</i></td>
+        <td class="badge">353</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/eurasian-curlew.html">Eurasian Curlew</a></td>
+        <td class="small"><i>Numenius arquata</i></td>
+        <td class="badge">354</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/purple-sandpiper.html">Purple Sandpiper</a></td>
+        <td class="small"><i>Calidris maritima</i></td>
+        <td class="badge">355</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Loafing</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-gull.html">Common Gull</a></td>
+        <td class="small"><i>Larus canus</i></td>
+        <td class="badge">356</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/house-sparrow.html">House Sparrow</a></td>
+        <td class="small"><i>Passer domesticus</i></td>
+        <td class="badge">357</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Loafing, Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/tundra-swan.html">Tundra Swan</a></td>
+        <td class="small"><i>Cygnus columbianus</i></td>
+        <td class="badge">358</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/purple-finch.html">Purple Finch</a></td>
+        <td class="small"><i>Haemorhous purpureus</i></td>
+        <td class="badge">359</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Foraging</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/northern-shrike.html">Northern Shrike</a></td>
+        <td class="small"><i>Lanius borealis</i></td>
+        <td class="badge">360</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/great-horned-owl.html">Great Horned Owl</a></td>
+        <td class="small"><i>Bubo virginianus</i></td>
+        <td class="badge">361</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Watching</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-phoebe.html">Black Phoebe</a></td>
+        <td class="small"><i>Sayornis nigricans</i></td>
+        <td class="badge">362</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bridled-titmouse.html">Bridled Titmouse</a></td>
+        <td class="small"><i>Baeolophus wollweberi</i></td>
+        <td class="badge">363</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/juniper-titmouse.html">Juniper Titmouse</a></td>
+        <td class="small"><i>Baeolophus ridgwayi</i></td>
+        <td class="badge">364</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/american-wigeon.html">American Wigeon</a></td>
+        <td class="small"><i>Mareca americana</i></td>
+        <td class="badge">365</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Swimming, Wading</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/western-bluebird.html">Western Bluebird</a></td>
+        <td class="small"><i>Sialia mexicana</i></td>
+        <td class="badge">366</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Drinking, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesser-goldfinch.html">Lesser Goldfinch</a></td>
+        <td class="small"><i>Spinus psaltria</i></td>
+        <td class="badge">367</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rock-wren.html">Rock Wren</a></td>
+        <td class="small"><i>Salpinctes obsoletus</i></td>
+        <td class="badge">368</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Loafing, Perched</span>
+    <span class='tag'>T: Borb, Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/canyon-towhee.html">Canyon Towhee</a></td>
+        <td class="small"><i>Melozone fusca</i></td>
+        <td class="badge">369</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gila-woodpecker.html">Gila Woodpecker</a></td>
+        <td class="small"><i>Melanerpes uropygialis</i></td>
+        <td class="badge">370</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/hammond-s-flycatcher.html">Hammond&#39;s Flycatcher</a></td>
+        <td class="small"><i>Empidonax hammondii</i></td>
+        <td class="badge">371</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/ladder-backed-woodpecker.html">Ladder-backed Woodpecker</a></td>
+        <td class="small"><i>Dryobates scalaris</i></td>
+        <td class="badge">372</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched, Preening</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/canyon-wren.html">Canyon Wren</a></td>
+        <td class="small"><i>Catherpes mexicanus</i></td>
+        <td class="badge">373</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Scanning</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/marsh-wren.html">Marsh Wren</a></td>
+        <td class="small"><i>Cistothorus palustris</i></td>
+        <td class="badge">374</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/cactus-wren.html">Cactus Wren</a></td>
+        <td class="small"><i>Campylorhynchus brunneicapillus</i></td>
+        <td class="badge">375</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Loafing</span>
+    <span class='tag'>T: Eye, Tongue</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/gambel-s-quail.html">Gambel&#39;s Quail</a></td>
+        <td class="small"><i>Callipepla gambelii</i></td>
+        <td class="badge">376</td>
+        <td class="badge">4</td>
+        <td><span class='tag'>A: Loafing, Walking</span>
+    <span class='tag'>T: Eye, Tail-less</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/verdin.html">Verdin</a></td>
+        <td class="small"><i>Auriparus flaviceps</i></td>
+        <td class="badge">377</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bewick-s-wren.html">Bewick&#39;s Wren</a></td>
+        <td class="small"><i>Thryomanes bewickii</i></td>
+        <td class="badge">378</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/curve-billed-thrasher.html">Curve-billed Thrasher</a></td>
+        <td class="small"><i>Toxostoma curvirostre</i></td>
+        <td class="badge">379</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-throated-sparrow.html">Black-throated Sparrow</a></td>
+        <td class="small"><i>Amphispiza bilineata</i></td>
+        <td class="badge">380</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/abert-s-towhee.html">Abert&#39;s Towhee</a></td>
+        <td class="small"><i>Melozone aberti</i></td>
+        <td class="badge">381</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/harris-s-hawk.html">Harris&#39;s Hawk</a></td>
+        <td class="small"><i>Parabuteo unicinctus</i></td>
+        <td class="badge">382</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rosy-faced-lovebird.html">Rosy-faced Lovebird</a></td>
+        <td class="small"><i>Agapornis roseicollis</i></td>
+        <td class="badge">383</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rough-legged-hawk.html">Rough-legged Hawk</a></td>
+        <td class="small"><i>Buteo lagopus</i></td>
+        <td class="badge">384</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lesser-scaup.html">Lesser Scaup</a></td>
+        <td class="small"><i>Aythya affinis</i></td>
+        <td class="badge">385</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Floating, Stretching</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/canvasback.html">Canvasback</a></td>
+        <td class="small"><i>Aythya valisineria</i></td>
+        <td class="badge">386</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Floating</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/redhead.html">Redhead</a></td>
+        <td class="small"><i>Aythya americana</i></td>
+        <td class="badge">387</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Floating</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/lapland-longspur.html">Lapland Longspur</a></td>
+        <td class="small"><i>Calcarius lapponicus</i></td>
+        <td class="badge">388</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/blue-winged-warbler.html">Blue-winged Warbler</a></td>
+        <td class="small"><i>Vermivora cyanoptera</i></td>
+        <td class="badge">389</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/least-flycatcher.html">Least Flycatcher</a></td>
+        <td class="small"><i>Empidonax minimus</i></td>
+        <td class="badge">390</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bobolink.html">Bobolink</a></td>
+        <td class="small"><i>Dolichonyx oryzivorus</i></td>
+        <td class="badge">391</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Perched</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/bank-swallow.html">Bank Swallow</a></td>
+        <td class="small"><i>Riparia riparia</i></td>
+        <td class="badge">392</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-wood-pigeon.html">Common Wood-Pigeon</a></td>
+        <td class="small"><i>Columba palumbus</i></td>
+        <td class="badge">393</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Loafing</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/black-kite.html">Black Kite</a></td>
+        <td class="small"><i>Milvus migrans</i></td>
+        <td class="badge">394</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: BIF</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/rose-ringed-parakeet.html">Rose-ringed Parakeet</a></td>
+        <td class="small"><i>Psittacula krameri</i></td>
+        <td class="badge">395</td>
+        <td class="badge">0</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/monk-parakeet.html">Monk Parakeet</a></td>
+        <td class="small"><i>Myiopsitta monachus</i></td>
+        <td class="badge">396</td>
+        <td class="badge">3</td>
+        <td><span class='tag'>A: BIF, Perched</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/stock-dove.html">Stock Dove</a></td>
+        <td class="small"><i>Columba oenas</i></td>
+        <td class="badge">397</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/common-swift.html">Common Swift</a></td>
+        <td class="small"><i>Apus apus</i></td>
+        <td class="badge">398</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/pallid-swift.html">Pallid Swift</a></td>
+        <td class="small"><i>Apus pallidus</i></td>
+        <td class="badge">399</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: BIF</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/iberian-green-woodpecker.html">Iberian Green Woodpecker</a></td>
+        <td class="small"><i>Picus sharpei</i></td>
+        <td class="badge">400</td>
+        <td class="badge">2</td>
+        <td><span class='tag'>A: Foraging</span>
+    <span class='tag'>T: Eye</span></td>
+      </tr>
+
+      <tr>
+        <td><a href="species/spotless-starling.html">Spotless Starling</a></td>
+        <td class="small"><i>Sturnus unicolor</i></td>
+        <td class="badge">401</td>
+        <td class="badge">1</td>
+        <td><span class='tag'>A: Foraging</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+</div>
+<script src="assets/spotlight.js" defer></script>
+
+</div>
+<script>
+function tableFilter(inputId, tableId){
+  const q = document.getElementById(inputId).value.trim().toLowerCase();
+  const rows = document.querySelectorAll(`#${tableId} tbody tr`);
+  for (const tr of rows) {
+    const text = tr.innerText.toLowerCase();
+    tr.style.display = text.indexOf(q) >= 0 ? "" : "none";
+  }
+}
+// very small click-to-sort
+function makeSortable(tableId){
+  const table = document.getElementById(tableId);
+  if(!table) return;
+  table.querySelectorAll('th').forEach((th, idx) => {
+    th.addEventListener('click', () => {
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      const asc = th.dataset.sortAsc === "true" ? false : true;
+      rows.sort((a,b)=>{
+        const ta = a.children[idx].innerText.trim();
+        const tb = b.children[idx].innerText.trim();
+        const na = parseFloat(ta.replace(/[^0-9.-]/g,'')); const nb = parseFloat(tb.replace(/[^0-9.-]/g,''));
+        const aNum = !isNaN(na) && ta.match(/^[0-9 .%-]+$/); const bNum = !isNaN(nb) && tb.match(/^[0-9 .%-]+$/);
+        if (aNum && bNum) return asc ? (na-nb) : (nb-na);
+        return asc ? ta.localeCompare(tb) : tb.localeCompare(ta);
+      });
+      tbody.innerHTML = ""; rows.forEach(r=>tbody.appendChild(r));
+      table.querySelectorAll('th').forEach(h=>h.dataset.sortAsc="");
+      th.dataset.sortAsc = asc ? "true" : "false";
+    });
+  });
+}
+
+function setupLightbox(){
+  const items = Array.from(document.querySelectorAll('.lightbox-item'));
+  if (!items.length) return;
+  const modal = document.getElementById('lightbox');
+  const img = modal.querySelector('img');
+  const cap = modal.querySelector('.caption');
+  const btnPrev = modal.querySelector('.prev');
+  const btnNext = modal.querySelector('.next');
+  const btnClose = modal.querySelector('.close');
+  let idx = -1;
+
+  function openAt(i){
+    idx = i;
+    const el = items[idx];
+    img.src = el.dataset.full || "";
+    img.alt = el.dataset.alt || "";
+    cap.innerHTML = el.dataset.tech + "<br />" + el.dataset.meta || "";
+    if (el.dataset.context) {
+        cap.innerHTML += "<br />" + el.dataset.context;
+    }
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    img.src = "";
+  }
+  function next(){ openAt((idx + 1) % items.length); }
+  function prev(){ openAt((idx - 1 + items.length) % items.length); }
+
+  items.forEach((el,i)=>{
+    el.addEventListener('click', (e)=>{ e.preventDefault(); openAt(i); });
+  });
+  modal.addEventListener('click', (e)=>{ if(e.target === modal) close(); });
+  btnClose.addEventListener('click', close);
+  btnNext.addEventListener('click', next);
+  btnPrev.addEventListener('click', prev);
+  document.addEventListener('keydown', (e)=>{
+    if(!modal.classList.contains('open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowRight') next();
+    if(e.key === 'ArrowLeft') prev();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  makeSortable('speciesTable'); setupLightbox();
+});
+</script>
+</body>
+</html>
