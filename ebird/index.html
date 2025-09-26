@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>eBird Name Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+        }
+
+        input[type="text"] {
+            padding: 0.5em;
+            width: 300px;
+        }
+
+        .results {
+            margin-top: 2em;
+        }
+
+        .result-item {
+            padding: 0.5em 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>eBird Species Search</h1>
+    <form id="searchForm">
+        <label for="searchInput">Enter Name:</label>
+        <input type="text" id="searchInput" autocomplete="off" />
+        <button type="submit">Search</button>
+    </form>
+    <div class="results" id="results"></div>
+
+    <script>
+        let ebirdData = [];
+
+        // Load the JSON file (must be in the same directory)
+        fetch('ebird.json')
+            .then(response => response.json())
+            .then(data => {
+                ebirdData = data;
+            })
+            .catch(err => {
+                document.getElementById('results').innerHTML = 'Could not load ebird.json. Please use a local server.';
+            });
+
+        // Handle form submission
+        document.getElementById('searchForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const input = document.getElementById('searchInput').value.trim().toLowerCase();
+            const resultsDiv = document.getElementById('results');
+            if (!input) {
+                resultsDiv.innerHTML = '<em>Please enter a name to search.</em>';
+                return;
+            }
+
+            // Filter logic: "comName" includes input, and category is "species" or "issf"
+            const results = ebirdData.filter(item =>
+                (item.category === 'species' || item.category === 'issf' || item.category === 'form') &&
+                item.comName.toLowerCase().includes(input)
+            );
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<em>No matches found.</em>';
+                return;
+            }
+
+            // Display results
+            resultsDiv.innerHTML = results.map(item =>
+                `<div class="result-item">
+           <strong>${item.comName}</strong> <em>(${item.sciName})</em> <br/>
+           Category: ${item.category}, Species Code: ${item.speciesCode}
+         </div>`
+            ).join('');
+        });
+    </script>
+</body>
+
+</html>
